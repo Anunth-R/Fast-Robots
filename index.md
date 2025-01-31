@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Fast MAE5190 Fast Robots"
+title: "MAE5190 Fast Robots"
 ---
 
 <div style="text-align: center;">
@@ -8,7 +8,6 @@ title: "Fast MAE5190 Fast Robots"
   ![Profile Picture](assets/images/profile.jpg)
 </div>
 
-# Welcome to Fast MAE5190 Fast Robots
 
 Hi! I'm [Your Name], and welcome to my project for the **MAE5190 Fast Robots** course. Here, I explore the fascinating world of high-speed robotics and autonomous systems.
 
