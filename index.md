@@ -1,6 +1,6 @@
 # Home Page 🤖
 
-![Profile Picture](https://your-image-url.com)  <!-- Replace this URL with the link to your profile picture -->
+![Profile Picture](images/headshot.jpg)  <!-- Replace this URL with the link to your profile picture -->
 
 ## About Me
 
