@@ -5,7 +5,7 @@ title: "Fast MAE5190 Fast Robots"
 
 # Welcome to Fast MAE5190 Fast Robots
 
-![Profile Picture](images/headshot.jpg)
+![Profile Picture](images/headshot.JPG)
 
 Hello! I'm [Your Name], and this is my project for the MAE5190 Fast Robots course. In this project, we explore the world of high-speed robotics and autonomous systems. Below, you can find more about the course and the robots we'll be working with.
 
