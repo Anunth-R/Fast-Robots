@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "MAE5190 Fast Robots"
+title: "Home Page"
 ---
 
 # Welcome to Fast MAE5190 Fast Robots
