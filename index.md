@@ -3,7 +3,7 @@ layout: home
 title: "Home Page"
 ---
 
-# Welcome to my MAE5190 Fast Robots Webpage
+# Welcome to my Fast Robots Webpage
 
 ![Profile Picture](images/headshot.JPG)
 
