@@ -1,4 +1,4 @@
-# MAE5190 Fast Robots 🤖
+# Home Page 🤖
 
 ![Profile Picture](https://your-image-url.com)  <!-- Replace this URL with the link to your profile picture -->
 
