@@ -1,20 +1,16 @@
 ---
-layout: default
-title: MAE5190 Fast Robots
+layout: home
+title: "Fast MAE5190 Fast Robots"
 ---
 
-# MAE5190 Fast Robots 🤖
+# Welcome to Fast MAE5190 Fast Robots
 
-![Profile Picture](https://your-image-url.com)  <!-- Replace this URL with the link to your profile picture -->
+![Profile Picture](assets/images/profile.jpg)
+
+Hello! I'm [Your Name], and this is my project for the MAE5190 Fast Robots course. In this project, we explore the world of high-speed robotics and autonomous systems. Below, you can find more about the course and the robots we'll be working with.
 
 ## About Me
 
-Hi! I'm [Your Name], a passionate [Your Profession/Interests]. I specialize in robotics and automation. I’m currently working on the **MAE5190 Fast Robots** course project, where we explore cutting-edge robotics technology.
+I am a robotics enthusiast with a passion for designing fast, efficient systems. In this course, I am learning how to apply principles of control systems, robotics algorithms, and high-speed dynamics to build robots capable of moving at impressive speeds. I aim to push the boundaries of speed, precision, and control in autonomous systems.
 
-Here’s a little more about me:
 
-- 🌱 Currently learning more about robotics and automation
-- 🤖 Working on building fast, agile robots for [specific project or challenge]
-- ⚡ Fun fact: [share something interesting about you!]
-
-Feel free to check out my projects below or connect with me on [LinkedIn](https://www.linkedin.com/in/your-profile).
