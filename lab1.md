@@ -37,7 +37,7 @@ In this lab, I learned the basics of working with Arduino and the Artimis Nano b
 
 # Lab 1B
 
-## Tasks ECHO
+## Task ECHO
 To test the Artemis board's ability to recieve data from Python, modify it, and send it back to the computer, I wrote a simple ECHO command. This command allows the Artemis to take in a command from python and echo it back with the modifier "Robot says -> " in front of it.
 
 On the Arduino side:
@@ -47,6 +47,23 @@ On the Arduino side:
 On the Python side:
 
 ![image](https://github.com/user-attachments/assets/1e29265e-0615-4098-a909-a721112b096f)
+
+## Task GET_TIME_MILLIS
+
+The next task was to use the Artimis board's timer to send a message with the timestamp the message was sent at. To accomplish this, I created another command called GET_TIME_MILLIS.  I then leveraged the millis() function in Arduino to record the current time and send a message containing the recorded time.
+
+On the Arduino side:
+
+![image](https://github.com/user-attachments/assets/d00c4f3a-0cec-4455-9553-9ee3cd4ff095)
+
+On the Python side:
+
+![image](https://github.com/user-attachments/assets/87db72e7-414d-4c33-8624-00a02119079c)
+
+
+
+
+
 
 
 
