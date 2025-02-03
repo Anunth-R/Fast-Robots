@@ -92,7 +92,7 @@ On the Arduino side:
 
 ![image](https://github.com/user-attachments/assets/bd82f941-4039-485c-81ba-8c5ab4f4a7dd)
 
-On the Python side:
+On the Python side (only part of the messages shown):
 
 ![image](https://github.com/user-attachments/assets/0e26726c-9b4e-41ba-a9b0-ae818a269fe8)
 
@@ -105,7 +105,7 @@ On the Arduino side:
 ![image](https://github.com/user-attachments/assets/d0eb6a01-92fd-4cab-8ced-66b3d263a3cf)
 
 
-On the python side:
+On the python side (only part of the messages shown):
 
 ![image](https://github.com/user-attachments/assets/62893a61-d14f-4fdd-9395-57067125bc35)
 
