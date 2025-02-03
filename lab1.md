@@ -96,6 +96,20 @@ On the Python side:
 
 ![image](https://github.com/user-attachments/assets/0e26726c-9b4e-41ba-a9b0-ae818a269fe8)
 
+## Sending Messages with an Array
+
+Instead of continuously sending messages, another method of data transmission is to populate an array with a bunch of messages and then loop through the array and transmit those messages. To do this, I defined a global array with 50 slots called time_stamps. I then wrote an Arduino command SEND_TIME_DATA that populated this array with timestamps using a for loop. After that, I wrote a second loop that traverses the array and sends the timestamp and corresponding message number to Python. All 50 messages were sent in around 1ms indicating a much faster data transfer rate when sending messages already stored in an array. 
+
+On the Arduino side:
+
+![image](https://github.com/user-attachments/assets/d0eb6a01-92fd-4cab-8ced-66b3d263a3cf)
+
+
+On the python side:
+
+![image](https://github.com/user-attachments/assets/62893a61-d14f-4fdd-9395-57067125bc35)
+
+
 
 
 
