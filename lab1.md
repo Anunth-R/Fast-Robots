@@ -4,7 +4,7 @@ title: Lab 1
 ---
 
 ## Prelab
-
+During the prelab, I setup my Arduino IDE and installed the nessesary libraries.
 ## Task 1: Blink
 
 ## Task 2: Serial
