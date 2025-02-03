@@ -76,6 +76,17 @@ On the Python side:
 
 ![image](https://github.com/user-attachments/assets/87db72e7-414d-4c33-8624-00a02119079c)
 
+## Notification Handler
+
+To allow Python to process data whenever a message from the Artemis board is sent, we can set up a notification handler. The notification handler shown below extracts the time and message number and prints it. This handler will become useful for the next task. 
+
+On the Python side:
+
+![image](https://github.com/user-attachments/assets/15cde700-6530-4ae9-904d-43c7a3a4879a)
+
+
+
+
 
 
 
