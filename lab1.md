@@ -3,6 +3,8 @@ layout: default
 title: Lab 1
 ---
 
+# lab 1A
+
 ## Prelab
 During the prelab, I setup my Arduino IDE and installed the nessesary libraries.
 ## Task 1: Blink
@@ -32,3 +34,22 @@ Finally, I wrote code that detects when a musical c note is played and turns on 
 
 ## Discussion
 In this lab, I learned the basics of working with Arduino and the Artimis Nano board. This lab also help verify that my board is functioning correctly so that i can proceed with running more complex tasks on the Artimis in future labs. 
+
+# Lab 1B
+
+## Tasks ECHO
+To test the Artemis board's ability to recieve data from Python, modify it, and send it back to the computer, I wrote a simple ECHO command. This command allows the Artemis to take in a command from python and echo it back with the modifier "Robot says -> " in front of it.
+
+On the Arduino side:
+![image](https://github.com/user-attachments/assets/9be4e9fd-648a-4a68-9f02-1754455f963c)
+
+On the Python side:
+![image](https://github.com/user-attachments/assets/1e29265e-0615-4098-a909-a721112b096f)
+
+
+
+
+
+
+
+
