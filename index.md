@@ -16,7 +16,7 @@ I am studying mechanical engineering with a minor in robotics at Cornell Univers
 
 [Lab1](\lab1.md)
 
-
+[](\lab1.md)
 
 
 
