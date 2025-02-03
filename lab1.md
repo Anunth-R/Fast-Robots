@@ -16,6 +16,5 @@ After that, I tested my ability to send and recieve data over serial communicati
 <iframe width="560" height="315" src="https://www.youtube.com/watch?v=KBXVvA9q3zI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-
 ## Discussion
 
