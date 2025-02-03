@@ -30,6 +30,11 @@ We can also test the microphone on the Artimis Nano which takes in analog sound 
 ## Task 5: Musical C Note
 Finally, I wrote code that detects when a musical c note is played and turns on the board's LED. If not, the LED turns off. To do this, I modified the code from task 4 to turn on the LED when the loudest frequency is between 500 and 600 units. I experimentally determined that this was the frequency range of a C note. 
 
+Arduino code logic:
+
+![image](https://github.com/user-attachments/assets/8d18ea60-318f-484b-85e2-18170345e88a)
+
+
 [task_5](https://youtu.be/IyVRt3Y_dtY)
 
 ## Discussion
