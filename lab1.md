@@ -84,6 +84,20 @@ On the Python side:
 
 ![image](https://github.com/user-attachments/assets/15cde700-6530-4ae9-904d-43c7a3a4879a)
 
+## Continuously Sending Messages
+
+An important piece of information about our bluetooth setup is the rate at which information can be sent to our computer from the Artemis. To do this, I wrote a DATA_LOOP command that loops for 5 seconds. In each interation of the loop, the Artemis board sends the current time and message number to Python. The notification handler defined previously picks up these messages and prints them. During 5 seconds, 138 messages were outputted indicating a transmition rate of around 28 messages/sec. 
+
+On the Arduino side:
+
+![image](https://github.com/user-attachments/assets/bd82f941-4039-485c-81ba-8c5ab4f4a7dd)
+
+On the Python side:
+
+![image](https://github.com/user-attachments/assets/0e26726c-9b4e-41ba-a9b0-ae818a269fe8)
+
+
+
 
 
 
