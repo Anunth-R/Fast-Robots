@@ -7,6 +7,8 @@ title: Lab 1
 During the prelab, I setup my Arduino IDE and installed the nessesary libraries.
 ## Task 1: Blink
 To test basic functionality of the board, I ran the Blink.io file.
+1[video](https://youtube.com/shorts/4fWxn6_mYdg?feature=share)
+
 ## Task 2: Serial
 After that, I tested my ability to send and recieve data over serial communication. This will be useful in the future when debugging my code. The messages were sent with a baud rate of 11520. 
 ## Task 3: Analog Read/Temperature Sensing
