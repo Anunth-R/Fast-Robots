@@ -14,9 +14,7 @@ I am studying mechanical engineering with a minor in robotics at Cornell Univers
 
 # Labs
 
-[Lab1](\lab1.md)
-
-[](\lab1.md)
+[Lab1](lab1.md)
 
 
 
