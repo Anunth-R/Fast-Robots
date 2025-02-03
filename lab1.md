@@ -13,7 +13,8 @@ After that, I tested my ability to send and recieve data over serial communicati
 
 ## Task 4: Microphone
 
-<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;width:100%;"><iframe src="https://www.youtube.com/watch?v=KBXVvA9q3zI" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen></iframe></div>
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=KBXVvA9q3zI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 ## Discussion
