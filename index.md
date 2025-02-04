@@ -1,7 +1,3 @@
----
-layout: home
-title: "Home Page"
----
 
 # Welcome to my Fast Robots Webpage
 
