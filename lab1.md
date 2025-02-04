@@ -132,7 +132,18 @@ Python Code (Request Data):
 
 Python Code (Print Data):
 
-![image](https://github.com/user-attachments/assets/542643e0-2ad9-4c74-92de-7deac039433c)
+![image](https://github.com/user-attachments/assets/48f1d7d6-541f-4115-8204-a6708bffe152)
+
+## Tradeoffs Between Methods
+
+Both methods have their advantages and disadvantages. For sending small packets of data at an infrequent rate, live sending data might be better as the data is sent as soon as it is processed on the microcontroller. It also might be better for debugging. This is bacause the data is in real time which might make troubleshooting a lot easier. Therefore in senarios where you need continuous real time updates from sensors or for debugging, this method should be used.
+
+The second method can transfer data really fast. It sent 50 messages in less than a millisecond. However, this data is not in real time. There could be a considerable lag between the data sent and what is currently happening on the robot. Another disadvantage is that all of the data must be stored on the Artemis which has limited memory. Therefore, this method is ideal for senarios where you want to transmit collected sensor data in bulk quickly for later processing on a computer. 
+
+This begs the question of how much data can actually be stored on an Artemis? Our Artemis board has 384kb of storage. The data being transmitted is stored in floats which each take up 4bytes. Therefore, 96,000 data points of either temperature or time data can be stored before the Artemis Nano runs out of memory. 
+
+
+
 
 
 
