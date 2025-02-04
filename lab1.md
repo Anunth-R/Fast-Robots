@@ -54,14 +54,13 @@ To verify that the Artemis was working properly, I verified that the MAC address
 
 ![image](https://github.com/user-attachments/assets/69ff4391-7152-4cf0-b1c8-ef0bbd8e08f1)
 
-I then updated the MAC address in the connections.yaml folder to allow my computer to connect to the Artemis over bluetooth. I also generated a UUID to prevent accedently connecting to another board and updated both the arduino_ble and connections.yaml. 
+I then updated the MAC address in the connections.yaml folder. I also generated a UUID to prevent accedently connecting to another board and updated both the arduino_ble and connections.yaml. 
 
 ![image](https://github.com/user-attachments/assets/a53bf4c4-68fc-4059-af10-a82f9a728382)
 
 ![image](https://github.com/user-attachments/assets/aec71ea0-9e10-4081-9264-8804db378a9a)
 
-The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other.  In particular, the ble_arduino, base_ble and ble files handle communication on the Python side. Estring and RobotCommand are helper scripts that provide a useful datastructure and helper functions. 
-
+The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other. The UUID prevents me from accidently connecting to another board.
 
 ## Task ECHO
 I wrote a simple ECHO command that allows the Artemis to echo recieved commands back with "Robot says -> " in front of it.
@@ -104,7 +103,7 @@ On the Python side:
 
 ## Notification Handler
 
-To allow Python to process data whenever a message from the Artemis board is sent, we can set up a notification handler. The notification handler shown below extracts the time and message number and prints i.  
+To allow Python to process data whenever a message from the Artemis board is sent, we can set up a notification handler. The notification handler shown below extracts the time and message number and prints it.  
 
 On the Python side:
 
@@ -112,7 +111,7 @@ On the Python side:
 
 ## Continuously Sending Messages
 
-An important piece of information is ble's data transfer rate. To do this, I wrote a while loop that continuously sends timestamp messages for 5 seconds. The notification handler picks up these messages and prints them. During 5 seconds, 138 messages were outputted (28 messages/sec). 
+An important piece of information is ble's data transfer rate. To derermine this, I wrote a while loop that continuously sends timestamp messages for 5 seconds. The notification handler picks up these messages and prints them. During 5 seconds, 138 messages were outputted (28 messages/sec). 
 
 On the Arduino side:
 
@@ -131,13 +130,13 @@ On the Arduino side:
 ![image](https://github.com/user-attachments/assets/d0eb6a01-92fd-4cab-8ced-66b3d263a3cf)
 
 
-On the python side (only part of the messages shown):
+On the python side:
 
 ![image](https://github.com/user-attachments/assets/62893a61-d14f-4fdd-9395-57067125bc35)
 
 ## Sending Temperature and Time Data Simultaneously
 
-Using two arrays, we can send both time and temperature data. I created a new command GET_TEMP_READINGS which populated and sent these arrays. On the Python side, I implemented a new notification handler that used the recieved data to populate a corresponding arrays stored on my laptop. I then wrote python code that requested temperature data and printed the data from the python arrays. 
+Using two arrays in Arduino, we can send both time and temperature data. I created a new command GET_TEMP_READINGS which populated and sent these arrays. On the Python side, I implemented a new notification handler that used the recieved data to populate a corresponding arrays stored on my laptop. I then wrote python code that requested and printed the data from the python arrays. 
 
 Arduino Code:
 
@@ -165,7 +164,7 @@ This begs the question of how much data can actually be stored on an Artemis? Ou
 
 ## Effective Data Rate and Overhead
 
-To determine how message size affects data transmission rate, I created an Arduino command SEND_MESSAGE that takes in a message size supplied by the computer. it then constructs a character array of that size (1 element of char array = 1byte) and transmits it over bluetooth. On the Python side, I loop through different message sizes and time how long it takes to recieve a reply. As shown from the plot, sending many short messages induces more overhead reducing the data transfer rate when compared to larger messages. Sending longer messages reduces total overhead as less messages are sent. For example, the data transmission rate for 5 byte messages was 20.86 bytes/sec while the rate for 120 byte messages was 501.81 bytes/sec. 
+To determine how message size affects transmission rate, I created an Arduino command SEND_MESSAGE that takes in a message size and constructs/transmits a character array of that size (1 element of char array = 1byte). On the Python side, I loop through different message sizes and time how long it takes to recieve a reply. As shown from the plot, many short messages induce more overhead reducing the data transfer rate. Sending longer messages reduces total overhead as less messages are sent. For example, the data transmission rate for 5 byte messages was 20.86 bytes/sec while for 120 byte messages was 501.81 bytes/sec. 
 
 Arduino side:
 
