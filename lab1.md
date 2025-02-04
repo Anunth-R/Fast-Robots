@@ -75,7 +75,7 @@ On the Python side:
 
 ## SEND_THREE_FLOATS
 
-The next task was to extract those floats sent from my laptop and print them to the serial monitor. 
+The next task was to extract three floats sent from my laptop and print them to the serial monitor. 
 
 On the Arduino side:
 
@@ -91,7 +91,7 @@ When the Python code is run, the following message is printed in the serial moni
 
 ## Task GET_TIME_MILLIS
 
-After that, I used the Artimis board's timer to send a message with the timestamp the message was sent at.  I then leveraged the millis() function in Arduino to accomplish this.
+After that, I used the Artimis board's timer to send a message with the timestamp the message was sent at.  I leveraged the millis() function in Arduino to accomplish this.
 
 On the Arduino side:
 
