@@ -114,6 +114,32 @@ On the python side (only part of the messages shown):
 
 ![image](https://github.com/user-attachments/assets/62893a61-d14f-4fdd-9395-57067125bc35)
 
+## Sending Temperature and Time Data Simultaneously
+
+Using two arrays, we can send both time and temperature data. To accomplish this, I constructed a second aray called temps that had 50 slots just like Time_stamps. Then in a new Arduino command called GET_TEMP_READINGS, I implemented a while loop that filled up both arrays with time and temperature data. After that, a for loop transmited data from both arrays to Python. On the Python side, I implemented a new notification handler that used the recieved data to populate a corresponding temps and time_stamps array stored on my laptop. I then wrote code that called GET_TIME_READINGS which requested temperature data from the Arduino and code that printed the data from the arrays. 
+
+Arduino Code:
+
+![image](https://github.com/user-attachments/assets/809d2b57-69a1-413e-8f6b-10129f8b79c3)
+
+Python Code (notification handler):
+
+![image](https://github.com/user-attachments/assets/78e58d7e-a1b5-49c6-997d-978a3a0a74c5)
+
+Python Code (Request Data):
+
+![image](https://github.com/user-attachments/assets/312b98ee-8a3e-4e62-bdbc-55a2741e648d)
+
+Python Code (Print Data):
+
+![image](https://github.com/user-attachments/assets/542643e0-2ad9-4c74-92de-7deac039433c)
+
+
+
+
+
+
+
 
 
 
