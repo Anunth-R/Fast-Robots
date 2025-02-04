@@ -8,22 +8,22 @@ title: Lab 1
 ## Prelab
 During the prelab, I setup my Arduino IDE and installed the nessesary libraries.
 ## Task 1: Blink
-To test basic functionality of the board, I ran the Blink.io file.
 
 [task_1](https://youtube.com/shorts/4fWxn6_mYdg?feature=share)
 
 ## Task 2: Serial
-After that, I tested my ability to send and recieve data over serial communication. The messages were sent with a baud rate of 11520. 
+
+The messages were sent with a baud rate of 11520. 
 
 [task_2](https://youtu.be/Ij7tu1WB8s4)
 
 ## Task 3: Analog Read/Temperature Sensing
-The Artimis Nano has an onboard temperature sensor that can measure ambient temperature. By calling AnalogRead() in the Arduino code, we can convert the analog data from the temperature sensor into a digital signal that can be processed by the microcontoller. The ambient temperature is around 3300 units. When I squeeze the board heating it up, the temperature increases to 33700 units.
+The Artimis Nano has an onboard temperature sensor that can measure ambient temperature.  When I squeeze the board heating it up, the temperature increases to 33700 units.
 
 [task_3](https://youtu.be/af0yhHFqj68)
 
 ## Task 4: Microphone
-We can also test the microphone on the Artimis Nano which takes in analog sound and converts it to a digital signal that can be analyzed by the microcontroller. As shown in the video, the reading of the loudest frequency spikes whenever i snap my finger indicating that the microphone is working properly.
+We can also test the microphone on the Artimis Nano. As shown in the video, the reading of the loudest frequency spikes whenever i snap my finger.
 
 [task_4](https://youtu.be/KBXVvA9q3zI)
 
@@ -38,7 +38,7 @@ Arduino code logic:
 [task_5](https://youtu.be/IyVRt3Y_dtY)
 
 ## Discussion
-In this lab, I learned the basics of working with Arduino and the Artimis Nano board. This lab also help verify that my board is functioning correctly so that i can proceed with running more complex tasks on the Artimis in future labs. 
+In this lab, I learned the basics of working with Arduino and the Artimis Nano board. This lab also help verify that my board is functioning correctly.
 
 # Lab 1B
 
@@ -50,21 +50,21 @@ I ran the following commands to set up my python virtual environment.
 
 ![image](https://github.com/user-attachments/assets/0c8d0372-cc46-40c8-acac-4d095f54e826)
 
-I also downloaded the BLE codebase and burned it on the Artemis. To verify that the Artemis was working properly, I verified that the MAC address was printed to terminal.
+To verify that the Artemis was working properly, I verified that the MAC address was printed to terminal when running the ble_arduino script.
 
 ![image](https://github.com/user-attachments/assets/69ff4391-7152-4cf0-b1c8-ef0bbd8e08f1)
 
-I then updated the MAC address in the connections.yaml folder to allow my computer to connect to the Artemis over bluetooth. I also generated a UUID to prevent accedently connecting to another board and updated both the arduino_ble and connections.yaml folder as shown below. 
+I then updated the MAC address in the connections.yaml folder to allow my computer to connect to the Artemis over bluetooth. I also generated a UUID to prevent accedently connecting to another board and updated both the arduino_ble and connections.yaml. 
 
 ![image](https://github.com/user-attachments/assets/a53bf4c4-68fc-4059-af10-a82f9a728382)
 
 ![image](https://github.com/user-attachments/assets/aec71ea0-9e10-4081-9264-8804db378a9a)
 
-The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other.  In particular, the ble_arduino file handles the actual bluetooth communication on the board. In addition, the base_ble and ble python files handle communication on the Python side. Estring and RobotCommand are helper scripts that provide a useful datastructure and helper functions. 
+The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other.  In particular, the ble_arduino, base_ble and ble files handle communication on the Python side. Estring and RobotCommand are helper scripts that provide a useful datastructure and helper functions. 
 
 
 ## Task ECHO
-I wrote a simple ECHO command that allows the Artemis to take in a command from python and echo it back with the modifier "Robot says -> " in front of it.
+I wrote a simple ECHO command that allows the Artemis to echo recieved commands back with "Robot says -> " in front of it.
 
 On the Arduino side:
 
@@ -76,7 +76,7 @@ On the Python side:
 
 ## SEND_THREE_FLOATS
 
-The next task was to extract those floats sent from my laptop and print them to the serial monitor. To do this, I leveraged the robot_cmd.get_next_value() function to read and extract the floats and then printed each of those floats. 
+The next task was to extract those floats sent from my laptop and print them to the serial monitor. 
 
 On the Arduino side:
 
@@ -92,7 +92,7 @@ When the Python code is run, the following message is printed in the serial moni
 
 ## Task GET_TIME_MILLIS
 
-After that, I used the Artimis board's timer to send a message with the timestamp the message was sent at.  I then leveraged the millis() function in Arduino to record the current time and send a message containing the recorded time.
+After that, I used the Artimis board's timer to send a message with the timestamp the message was sent at.  I then leveraged the millis() function in Arduino to accomplish this.
 
 On the Arduino side:
 
@@ -104,7 +104,7 @@ On the Python side:
 
 ## Notification Handler
 
-To allow Python to process data whenever a message from the Artemis board is sent, we can set up a notification handler. The notification handler shown below extracts the time and message number and prints it.  
+To allow Python to process data whenever a message from the Artemis board is sent, we can set up a notification handler. The notification handler shown below extracts the time and message number and prints i.  
 
 On the Python side:
 
@@ -112,7 +112,7 @@ On the Python side:
 
 ## Continuously Sending Messages
 
-An important piece of information about our bluetooth setup is the rate at which information can be sent to our computer from the Artemis. To do this, I wrote a while loop that continuously sends timestamp messages for 5 seconds. The notification handler picks up these messages and prints them. During 5 seconds, 138 messages were outputted (28 messages/sec). 
+An important piece of information is ble's data transfer rate. To do this, I wrote a while loop that continuously sends timestamp messages for 5 seconds. The notification handler picks up these messages and prints them. During 5 seconds, 138 messages were outputted (28 messages/sec). 
 
 On the Arduino side:
 
@@ -124,7 +124,7 @@ On the Python side:
 
 ## Sending Messages with an Array
 
-Instead of continuously sending messages, another method of data transmission is to populate an array with a bunch of messages and then loop through the array and transmit those messages. To do this, I defined a global array with 50 slots called time_stamps. I then wrote an Arduino command SEND_TIME_DATA that populated this array with timestamps using a for loop. After that, I wrote a second loop that traverses the array and sends the timestamp and corresponding message number to Python. All 50 messages were sent in around 1ms indicating a much faster data transfer rate when sending messages already stored in an array. 
+Instead of continuously sending messages, another method of data transmission is to populate an array with a bunch of messages and then loop through the array and transmit those messages. To do this, I defined a global array with 50 slots called time_stamps. I then populated this array with timestamps and then sent them to Python. All 50 messages were sent in around 1ms indicating a much faster data transfer rate. 
 
 On the Arduino side:
 
@@ -137,7 +137,7 @@ On the python side (only part of the messages shown):
 
 ## Sending Temperature and Time Data Simultaneously
 
-Using two arrays, we can send both time and temperature data. To accomplish this, I constructed a second aray called temps that had 50 slots just like Time_stamps. Then in a new Arduino command called GET_TEMP_READINGS, I implemented a while loop that filled up both arrays with time and temperature data. After that, a for loop transmited data from both arrays to Python. On the Python side, I implemented a new notification handler that used the recieved data to populate a corresponding temps and time_stamps array stored on my laptop. I then wrote code that called GET_TIME_READINGS which requested temperature data from the Arduino and code that printed the data from the arrays. 
+Using two arrays, we can send both time and temperature data. I created a new command GET_TEMP_READINGS which populated and sent these arrays. On the Python side, I implemented a new notification handler that used the recieved data to populate a corresponding arrays stored on my laptop. I then wrote python code that requested temperature data and printed the data from the python arrays. 
 
 Arduino Code:
 
