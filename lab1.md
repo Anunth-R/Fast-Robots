@@ -182,11 +182,23 @@ Python side:
 
 ## Reliability
 
+To test reliability, I wrote an Arduino command called RELIABILITY which transfered 26 messages (containing the message number) with a given delay. I then wrote Python code that prints all of the messages recieved from the Arduino. I experimented with 0,20,100, and 200 ms delays. No matter the delay, all 26 transmitted messages were recieved in Python.
 
+Arduino Side:
+
+![image](https://github.com/user-attachments/assets/a4f12e6e-010e-4f2b-bc55-8c42eee194f1)
+
+Python side
+
+![image](https://github.com/user-attachments/assets/2ca27107-dd6f-45c6-9abc-6a00bd445025)
+
+![image](https://github.com/user-attachments/assets/c302726d-3f12-46ce-b0e8-51bef0ec93f7)
 
 
 
 ## Discussion
+
+In this lab, i gained familarity with BLE and refreshed by knowledge of Arduino/Python programming.
 
 
 
