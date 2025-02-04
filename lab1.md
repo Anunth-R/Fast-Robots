@@ -1,7 +1,10 @@
+---
+layout: default
+title: Lab 1
+---
 
-# Lab 1
 
-## Lab 1 A
+# Lab 1 A
 
 ## Prelab
 During the prelab, I setup my Arduino IDE and installed the nessesary libraries.
