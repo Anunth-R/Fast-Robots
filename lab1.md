@@ -13,22 +13,22 @@ To test basic functionality of the board, I ran the Blink.io file.
 [task_1](https://youtube.com/shorts/4fWxn6_mYdg?feature=share)
 
 ## Task 2: Serial
-After that, I tested my ability to send and recieve data over serial communication. This will be useful in the future when debugging my code. The messages were sent with a baud rate of 11520. 
+After that, I tested my ability to send and recieve data over serial communication. The messages were sent with a baud rate of 11520. 
 
 [task_2](https://youtu.be/Ij7tu1WB8s4)
 
 ## Task 3: Analog Read/Temperature Sensing
-The Artimis Nano has an onboard temperature sensor that can measure ambient temperature. By calling AnalogRead() in the Arduino code, we can convert the analog data from the temperature sensor into a digital signal that can be processed by the microcontoller and displayed on the serial monitor. The ambient temperature is around 3300 units. When I squeeze the board with my hand heating it up, the temperature increases to 33700 units indicating that the sensor is working properly.
+The Artimis Nano has an onboard temperature sensor that can measure ambient temperature. By calling AnalogRead() in the Arduino code, we can convert the analog data from the temperature sensor into a digital signal that can be processed by the microcontoller. The ambient temperature is around 3300 units. When I squeeze the board heating it up, the temperature increases to 33700 units.
 
 [task_3](https://youtu.be/af0yhHFqj68)
 
 ## Task 4: Microphone
-We can also test the microphone on the Artimis Nano which takes in analog sound and converts it to a digital signal that can be analyzed by the microcontroller using pulse density modulation(PDM). As shown in the video, the reading of the loudest frequency spikes whenever i snap my finger indicating that the microphone is working properly.
+We can also test the microphone on the Artimis Nano which takes in analog sound and converts it to a digital signal that can be analyzed by the microcontroller. As shown in the video, the reading of the loudest frequency spikes whenever i snap my finger indicating that the microphone is working properly.
 
 [task_4](https://youtu.be/KBXVvA9q3zI)
 
 ## Task 5: Musical C Note
-Finally, I wrote code that detects when a musical c note is played and turns on the board's LED. If not, the LED turns off. To do this, I modified the code from task 4 to turn on the LED when the loudest frequency is between 500 and 600 units. I experimentally determined that this was the frequency range of a C note. 
+Finally, I wrote code that detects when a musical c note is played and turns on the board's LED. If not, the LED turns off. 
 
 Arduino code logic:
 
@@ -60,11 +60,11 @@ I then updated the MAC address in the connections.yaml folder to allow my comput
 
 ![image](https://github.com/user-attachments/assets/aec71ea0-9e10-4081-9264-8804db378a9a)
 
-The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other. When a message is sent from my laptop, the board uses its UUID to identify that the message came from my laptop and process it. In particular, the ble_arduino file handles the actual bluetooth communication on the board. In addition, the base_ble and ble python files handle communication on the Python side. Estring and RobotCommand are helper scripts that provide a useful datastructure and a way of extracting data from command strings sent to Artemis respectively. 
+The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other.  In particular, the ble_arduino file handles the actual bluetooth communication on the board. In addition, the base_ble and ble python files handle communication on the Python side. Estring and RobotCommand are helper scripts that provide a useful datastructure and helper functions. 
 
 
 ## Task ECHO
-To test the Artemis board's ability to recieve data from Python, modify it, and send it back to the computer, I wrote a simple ECHO command. This command allows the Artemis to take in a command from python and echo it back with the modifier "Robot says -> " in front of it.
+I wrote a simple ECHO command that allows the Artemis to take in a command from python and echo it back with the modifier "Robot says -> " in front of it.
 
 On the Arduino side:
 
@@ -76,7 +76,7 @@ On the Python side:
 
 ## SEND_THREE_FLOATS
 
-The next task was to demonstrate that I could send numerical data from Python, extract those floats in Arduino, and then print them to the serial monitor. To do this, I leveraged the robot_cmd.get_next_value() function to read and extract the floats sent from Python and then printed each of those floats seperated by a comma. 
+The next task was to extract those floats sent from my laptop and print them to the serial monitor. To do this, I leveraged the robot_cmd.get_next_value() function to read and extract the floats and then printed each of those floats. 
 
 On the Arduino side:
 
@@ -92,7 +92,7 @@ When the Python code is run, the following message is printed in the serial moni
 
 ## Task GET_TIME_MILLIS
 
-After that, I used the Artimis board's timer to send a message with the timestamp the message was sent at. To accomplish this, I created another command called GET_TIME_MILLIS.  I then leveraged the millis() function in Arduino to record the current time and send a message containing the recorded time.
+After that, I used the Artimis board's timer to send a message with the timestamp the message was sent at.  I then leveraged the millis() function in Arduino to record the current time and send a message containing the recorded time.
 
 On the Arduino side:
 
@@ -104,7 +104,7 @@ On the Python side:
 
 ## Notification Handler
 
-To allow Python to process data whenever a message from the Artemis board is sent, we can set up a notification handler. The notification handler shown below extracts the time and message number and prints it. This handler will become useful for the next task. 
+To allow Python to process data whenever a message from the Artemis board is sent, we can set up a notification handler. The notification handler shown below extracts the time and message number and prints it.  
 
 On the Python side:
 
@@ -112,13 +112,13 @@ On the Python side:
 
 ## Continuously Sending Messages
 
-An important piece of information about our bluetooth setup is the rate at which information can be sent to our computer from the Artemis. To do this, I wrote a DATA_LOOP command that loops for 5 seconds. In each interation of the loop, the Artemis board sends the current time and message number to Python. The notification handler defined previously picks up these messages and prints them. During 5 seconds, 138 messages were outputted indicating a transmition rate of around 28 messages/sec. 
+An important piece of information about our bluetooth setup is the rate at which information can be sent to our computer from the Artemis. To do this, I wrote a while loop that continuously sends timestamp messages for 5 seconds. The notification handler picks up these messages and prints them. During 5 seconds, 138 messages were outputted (28 messages/sec). 
 
 On the Arduino side:
 
 ![image](https://github.com/user-attachments/assets/bd82f941-4039-485c-81ba-8c5ab4f4a7dd)
 
-On the Python side (only part of the messages shown):
+On the Python side:
 
 ![image](https://github.com/user-attachments/assets/0e26726c-9b4e-41ba-a9b0-ae818a269fe8)
 
@@ -157,15 +157,15 @@ Python Code (Print Data, only part of messages shown):
 
 ## Tradeoffs Between Methods 
 
-Both methods have their advantages and disadvantages. For sending small packets of data at an infrequent rate, live sending data might be better as the data is sent as soon as it is processed on the microcontroller. It also might be better for debugging. This is bacause the data is in real time which might make troubleshooting a lot easier. Therefore in senarios where you need continuous real time updates from sensors or for debugging, this method should be used.
+Both methods have their advantages and disadvantages. For sending small packets of data at an infrequent rate, live sending data might be better as the data is sent as soon as it is processed on the microcontroller. It also might be better for debugging. This is bacause the data is in real time which might make troubleshooting a lot easier. 
 
-The second method can transfer data really fast. It sent 50 messages in less than a millisecond. However, this data is not in real time. There could be a considerable lag between the data sent and what is currently happening on the robot. Another disadvantage is that all of the data must be stored on the Artemis which has limited memory. Therefore, this method is ideal for senarios where you want to transmit collected sensor data in bulk quickly for later processing on a computer. 
+The second method can transfer data really fast. It sent 50 messages in less than a millisecond. However, this data is not in real time. Another disadvantage is that all of the data must be stored on the Artemis which has limited memory. Therefore, this method is ideal for senarios where you want to transmit collected sensor data in bulk quickly for later processing on a computer. 
 
 This begs the question of how much data can actually be stored on an Artemis? Our Artemis board has 384kb of storage. The data being transmitted is stored in floats which each take up 4 bytes. Therefore, 96,000 data points of either temperature or time data can be stored before the Artemis Nano runs out of memory.
 
 ## Effective Data Rate and Overhead
 
-To determine how message size affects data transmission rate, I created an Arduino command SEND_MESSAGE that takes in a message size supplied by the computer. it then constructs a character array of that size (1 element of char array = 1byte) and transmits it over bluetooth. On the Python side, I loop through different message sizes and time how long it takes to recieve a reply. The results are plotted below. As shown from the plot, sending many short messages induces more overhead reducing the data transfer rate when compared to larger messages. Sending longer messages reduces total overhead as less messages are sent. For example, the data transmission rate for 5 byte messages was 20.86 bytes/sec while the rate for 120 byte messages was 501.81 bytes/sec. 
+To determine how message size affects data transmission rate, I created an Arduino command SEND_MESSAGE that takes in a message size supplied by the computer. it then constructs a character array of that size (1 element of char array = 1byte) and transmits it over bluetooth. On the Python side, I loop through different message sizes and time how long it takes to recieve a reply. As shown from the plot, sending many short messages induces more overhead reducing the data transfer rate when compared to larger messages. Sending longer messages reduces total overhead as less messages are sent. For example, the data transmission rate for 5 byte messages was 20.86 bytes/sec while the rate for 120 byte messages was 501.81 bytes/sec. 
 
 Arduino side:
 
