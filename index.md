@@ -1,3 +1,8 @@
+---
+layout: home
+title: Home Page
+---
+
 # Welcome to my Fast Robots Webpage
 
 ![Profile Picture](images/headshot.JPG)
