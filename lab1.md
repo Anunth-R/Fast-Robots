@@ -18,17 +18,17 @@ The messages were sent with a baud rate of 11520.
 [task_2](https://youtu.be/Ij7tu1WB8s4)
 
 ## Task 3: Analog Read/Temperature Sensing
-The Artimis Nano has an onboard temperature sensor that can measure ambient temperature.  When I squeeze the board heating it up, the temperature increases to 33700 units.
+The Artimis Nano has an onboard temperature sensor that can measure ambient temperature.  When I squeezed the board heating it up, the temperature increased  from 33300 to 33700 units indicating the code works.
 
 [task_3](https://youtu.be/af0yhHFqj68)
 
 ## Task 4: Microphone
-We can also test the microphone on the Artimis Nano. As shown in the video, the reading of the loudest frequency spikes whenever i snap my finger.
+We can also test the microphone on the Artimis Nano. As shown in the video, the loudest frequency reading spikes whenever i snap my finger.
 
 [task_4](https://youtu.be/KBXVvA9q3zI)
 
 ## Task 5: Musical C Note
-Finally, I wrote code that detects when a musical c note is played and turns on the board's LED. If not, the LED turns off. 
+Finally, I wrote code that turns on the board's LED when a musical c note is played. If not, the LED turns off. 
 
 Arduino code logic:
 
