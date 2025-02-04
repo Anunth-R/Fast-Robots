@@ -48,7 +48,7 @@ I ran the following commands to set up my python virtual environment.
 
 ![image](https://github.com/user-attachments/assets/65ed7125-faf8-4eed-a4dd-7ddc181a5632)
 
-![image](https://github.com/user-attachments/assets/1dbb7dd2-5931-43a5-88e2-342a82e30b79)
+![image](https://github.com/user-attachments/assets/0c8d0372-cc46-40c8-acac-4d095f54e826)
 
 I also downloaded the BLE codebase and burned it on the Artemis. To verify that the Artemis was working properly, I verified that the MAC address was printed to terminal.
 
@@ -59,6 +59,8 @@ I then updated the MAC address in the connections.yaml folder to allow my comput
 ![image](https://github.com/user-attachments/assets/a53bf4c4-68fc-4059-af10-a82f9a728382)
 
 ![image](https://github.com/user-attachments/assets/aec71ea0-9e10-4081-9264-8804db378a9a)
+
+The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other. When a message is sent from my laptop, the board uses its UUID to identify that the message came from my laptop and process it. In particular, the ble_arduino file handles the actual bluetooth communication on the board. In addition, the base_ble and ble python files handle communication on the Python side. Estring and RobotCommand also provide different kinds of messages that can be sent over bluetooth. 
 
 
 ## Task ECHO
