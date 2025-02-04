@@ -42,6 +42,25 @@ In this lab, I learned the basics of working with Arduino and the Artimis Nano b
 
 # Lab 1B
 
+## Prelab/ Computer Setup
+
+I ran the following commands to set up my python virtual environment. 
+
+![image](https://github.com/user-attachments/assets/65ed7125-faf8-4eed-a4dd-7ddc181a5632)
+
+![image](https://github.com/user-attachments/assets/1dbb7dd2-5931-43a5-88e2-342a82e30b79)
+
+I also downloaded the BLE codebase and burned it on the Artemis. To verify that the Artemis was working properly, I verified that the MAC address was printed to terminal.
+
+![image](https://github.com/user-attachments/assets/69ff4391-7152-4cf0-b1c8-ef0bbd8e08f1)
+
+I then updated the MAC address in the connections.yaml folder to allow my computer to connect to the Artemis over bluetooth. I also generated a UUID to prevent accedently connecting to another board and updated both the arduino_ble and connections.yaml folder as shown below. 
+
+![image](https://github.com/user-attachments/assets/a53bf4c4-68fc-4059-af10-a82f9a728382)
+
+![image](https://github.com/user-attachments/assets/aec71ea0-9e10-4081-9264-8804db378a9a)
+
+
 ## Task ECHO
 To test the Artemis board's ability to recieve data from Python, modify it, and send it back to the computer, I wrote a simple ECHO command. This command allows the Artemis to take in a command from python and echo it back with the modifier "Robot says -> " in front of it.
 
@@ -130,17 +149,19 @@ Python Code (Request Data):
 
 ![image](https://github.com/user-attachments/assets/312b98ee-8a3e-4e62-bdbc-55a2741e648d)
 
-Python Code (Print Data):
+Python Code (Print Data, only part of messages shown):
 
 ![image](https://github.com/user-attachments/assets/48f1d7d6-541f-4115-8204-a6708bffe152)
 
-## Tradeoffs Between Methods
+## Tradeoffs Between Methods 
 
 Both methods have their advantages and disadvantages. For sending small packets of data at an infrequent rate, live sending data might be better as the data is sent as soon as it is processed on the microcontroller. It also might be better for debugging. This is bacause the data is in real time which might make troubleshooting a lot easier. Therefore in senarios where you need continuous real time updates from sensors or for debugging, this method should be used.
 
 The second method can transfer data really fast. It sent 50 messages in less than a millisecond. However, this data is not in real time. There could be a considerable lag between the data sent and what is currently happening on the robot. Another disadvantage is that all of the data must be stored on the Artemis which has limited memory. Therefore, this method is ideal for senarios where you want to transmit collected sensor data in bulk quickly for later processing on a computer. 
 
 This begs the question of how much data can actually be stored on an Artemis? Our Artemis board has 384kb of storage. The data being transmitted is stored in floats which each take up 4bytes. Therefore, 96,000 data points of either temperature or time data can be stored before the Artemis Nano runs out of memory. 
+
+
 
 
 
