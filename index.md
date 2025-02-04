@@ -14,8 +14,7 @@ I am studying mechanical engineering with a minor in robotics at Cornell Univers
 
 ## Labs
 
-[Lab 1](lab1.md)
-
+[Lab 1](https://github.com/Anunth-R/Fast-Robots/blob/main/lab1.md)
 
 
 
