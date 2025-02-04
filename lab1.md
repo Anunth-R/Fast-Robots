@@ -3,7 +3,6 @@ layout: default
 title: Lab 1
 ---
 
-
 # Lab 1 A
 
 ## Prelab
