@@ -1,7 +1,3 @@
----
-layout: default
-title: Lab 1
----
 
 # lab 1A
 
