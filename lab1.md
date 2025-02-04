@@ -60,7 +60,7 @@ I then updated the MAC address in the connections.yaml folder to allow my comput
 
 ![image](https://github.com/user-attachments/assets/aec71ea0-9e10-4081-9264-8804db378a9a)
 
-The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other. When a message is sent from my laptop, the board uses its UUID to identify that the message came from my laptop and process it. In particular, the ble_arduino file handles the actual bluetooth communication on the board. In addition, the base_ble and ble python files handle communication on the Python side. Estring and RobotCommand also provide different kinds of messages that can be sent over bluetooth. 
+The following setup and codebase allows my computer and the Artemis board to wirelessly communicate with each other. When a message is sent from my laptop, the board uses its UUID to identify that the message came from my laptop and process it. In particular, the ble_arduino file handles the actual bluetooth communication on the board. In addition, the base_ble and ble python files handle communication on the Python side. Estring and RobotCommand are helper scripts that provide a useful datastructure and a way of extracting data from command strings sent to Artemis respectively. 
 
 
 ## Task ECHO
@@ -161,7 +161,33 @@ Both methods have their advantages and disadvantages. For sending small packets 
 
 The second method can transfer data really fast. It sent 50 messages in less than a millisecond. However, this data is not in real time. There could be a considerable lag between the data sent and what is currently happening on the robot. Another disadvantage is that all of the data must be stored on the Artemis which has limited memory. Therefore, this method is ideal for senarios where you want to transmit collected sensor data in bulk quickly for later processing on a computer. 
 
-This begs the question of how much data can actually be stored on an Artemis? Our Artemis board has 384kb of storage. The data being transmitted is stored in floats which each take up 4bytes. Therefore, 96,000 data points of either temperature or time data can be stored before the Artemis Nano runs out of memory. 
+This begs the question of how much data can actually be stored on an Artemis? Our Artemis board has 384kb of storage. The data being transmitted is stored in floats which each take up 4 bytes. Therefore, 96,000 data points of either temperature or time data can be stored before the Artemis Nano runs out of memory.
+
+## Effective Data Rate and Overhead
+
+To determine how message size affects data transmission rate, I created an Arduino command SEND_MESSAGE that takes in a message size supplied by the computer. it then constructs a character array of that size (1 element of char array = 1byte) and transmits it over bluetooth. On the Python side, I loop through different message sizes and time how long it takes to recieve a reply. The results are plotted below. As shown from the plot, sending many short messages induces more overhead reducing the data transfer rate when compared to larger messages. Sending longer messages reduces total overhead as less messages are sent. For example, the data transmission rate for 5 byte messages was 20.86 bytes/sec while the rate for 120 byte messages was 501.81 bytes/sec. 
+
+Arduino side:
+
+![image](https://github.com/user-attachments/assets/8f837a90-5aa9-4beb-9011-6b9b8515a3f8)
+
+
+Python side:
+
+![image](https://github.com/user-attachments/assets/b23f7761-4f21-4a2b-8483-8661c736b0d5)
+
+
+![image](https://github.com/user-attachments/assets/0915eacb-2433-470b-af7a-62bd471821f9)
+
+
+
+## Reliability
+
+
+
+
+
+## Discussion
 
 
 
