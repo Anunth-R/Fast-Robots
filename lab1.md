@@ -18,7 +18,7 @@ The messages were sent with a baud rate of 11520.
 
 [task_2](https://youtu.be/Ij7tu1WB8s4)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/tu1WB8s4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ij7tu1WB8s4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Task 3: Analog Read/Temperature Sensing
  When I squeezed the board heating it up, the temperature sensor reading increased  from 33300 to 33700 units indicating the code works.
