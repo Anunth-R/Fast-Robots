@@ -9,8 +9,6 @@ title: Lab 1
 During the prelab, I setup my Arduino IDE and installed the nessesary libraries.
 ## Task 1: Blink
 
-[task_1](https://youtube.com/shorts/4fWxn6_mYdg?feature=share)
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/4fWxn6_mYdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
@@ -20,17 +18,15 @@ The messages were sent with a baud rate of 11520.
 
 [task_2](https://youtu.be/Ij7tu1WB8s4)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tu1WB8s4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Task 3: Analog Read/Temperature Sensing
  When I squeezed the board heating it up, the temperature sensor reading increased  from 33300 to 33700 units indicating the code works.
-
-[task_3](https://youtu.be/af0yhHFqj68)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/af0yhHFqj68" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Task 4: Microphone
 We can also test the microphone on the Artimis Nano. As shown in the video, the loudest frequency reading spikes whenever i snap my finger.
-
-[task_4](https://youtu.be/KBXVvA9q3zI)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/KBXVvA9q3zI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -40,9 +36,6 @@ Finally, I wrote code that turns on the board's LED when a musical c note is pla
 Arduino code logic:
 
 ![image](https://github.com/user-attachments/assets/8d18ea60-318f-484b-85e2-18170345e88a)
-
-
-[task_5](https://youtu.be/IyVRt3Y_dtY)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IyVRt3Y_dtY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
