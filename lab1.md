@@ -18,7 +18,7 @@ The messages were sent with a baud rate of 11520.
 [task_2](https://youtu.be/Ij7tu1WB8s4)
 
 ## Task 3: Analog Read/Temperature Sensing
-The Artimis Nano has an onboard temperature sensor that can measure ambient temperature.  When I squeezed the board heating it up, the temperature increased  from 33300 to 33700 units indicating the code works.
+ When I squeezed the board heating it up, the temperature sensor reading increased  from 33300 to 33700 units indicating the code works.
 
 [task_3](https://youtu.be/af0yhHFqj68)
 
@@ -111,7 +111,7 @@ On the Python side:
 
 ## Continuously Sending Messages
 
-An important piece of information is ble's data transfer rate. To derermine this, I wrote a while loop that continuously sends timestamp messages for 5 seconds. The notification handler picks up these messages and prints them. During 5 seconds, 138 messages were outputted (28 messages/sec). 
+An important piece of information is ble's data transfer rate. To determine this, I wrote a while loop that continuously sends timestamp messages for 5 seconds. The notification handler picks up these messages and prints them. During 5 seconds, 138 messages were outputted (28 messages/sec). 
 
 On the Arduino side:
 
@@ -123,7 +123,7 @@ On the Python side:
 
 ## Sending Messages with an Array
 
-Instead of continuously sending messages, another method of data transmission is to populate an array with a bunch of messages and then loop through the array and transmit those messages. To do this, I defined a global array with 50 slots called time_stamps. I then populated this array with timestamps and then sent them to Python. All 50 messages were sent in around 1ms indicating a much faster data transfer rate. 
+Another method of data transmission is to populate an array with a bunch of messages and then send them. To do this, I defined a global array with 50 slots called time_stamps. I then populated this array with timestamps and then sent them to Python. All 50 messages were sent in around 1ms indicating a much faster data transfer rate. 
 
 On the Arduino side:
 
@@ -150,13 +150,13 @@ Python Code (Request Data):
 
 ![image](https://github.com/user-attachments/assets/312b98ee-8a3e-4e62-bdbc-55a2741e648d)
 
-Python Code (Print Data, only part of messages shown):
+Python Code (Print Data):
 
 ![image](https://github.com/user-attachments/assets/48f1d7d6-541f-4115-8204-a6708bffe152)
 
 ## Tradeoffs Between Methods 
 
-Both methods have their advantages and disadvantages. For sending small packets of data at an infrequent rate, live sending data might be better as the data is sent as soon as it is processed on the microcontroller. It also might be better for debugging. This is bacause the data is in real time which might make troubleshooting a lot easier. 
+For sending small packets of data at an infrequent rate, live sending data might be better as the data is sent as soon as it is processed on the microcontroller. It also might be better for debugging. This is bacause the data is in real time which might make troubleshooting a lot easier. 
 
 The second method can transfer data really fast. It sent 50 messages in less than a millisecond. However, this data is not in real time. Another disadvantage is that all of the data must be stored on the Artemis which has limited memory. Therefore, this method is ideal for senarios where you want to transmit collected sensor data in bulk quickly for later processing on a computer. 
 
@@ -164,7 +164,7 @@ This begs the question of how much data can actually be stored on an Artemis? Ou
 
 ## Effective Data Rate and Overhead
 
-To determine how message size affects transmission rate, I created an Arduino command SEND_MESSAGE that takes in a message size and constructs/transmits a character array of that size (1 element of char array = 1byte). On the Python side, I loop through different message sizes and time how long it takes to recieve a reply. As shown from the plot, many short messages induce more overhead reducing the data transfer rate. Sending longer messages reduces total overhead as less messages are sent. For example, the data transmission rate for 5 byte messages was 20.86 bytes/sec while for 120 byte messages was 501.81 bytes/sec. 
+To determine how message size affects transmission rate, I created an Arduino command SEND_MESSAGE that takes in a message size and constructs/transmits a character array of that size (1 element = 1byte). On the Python side, I loop through different message sizes and time how long it takes to recieve a reply. As shown from the plot, many short messages induce more overhead reducing the data transfer rate. Sending longer messages reduces total overhead as less messages are sent. For example, the data transmission rate for 5 byte messages was 20.86 bytes/sec while for 120 byte messages was 501.81 bytes/sec. 
 
 Arduino side:
 
