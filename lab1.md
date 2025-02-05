@@ -11,6 +11,9 @@ During the prelab, I setup my Arduino IDE and installed the nessesary libraries.
 
 [task_1](https://youtube.com/shorts/4fWxn6_mYdg?feature=share)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4fWxn6_mYdg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 ## Task 2: Serial
 
 The messages were sent with a baud rate of 11520. 
