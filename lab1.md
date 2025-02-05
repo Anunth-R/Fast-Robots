@@ -16,8 +16,6 @@ During the prelab, I setup my Arduino IDE and installed the nessesary libraries.
 
 The messages were sent with a baud rate of 11520. 
 
-[task_2](https://youtu.be/Ij7tu1WB8s4)
-
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Ij7tu1WB8s4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Task 3: Analog Read/Temperature Sensing
