@@ -25,10 +25,14 @@ The messages were sent with a baud rate of 11520.
 
 [task_3](https://youtu.be/af0yhHFqj68)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/af0yhHFqj68" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Task 4: Microphone
 We can also test the microphone on the Artimis Nano. As shown in the video, the loudest frequency reading spikes whenever i snap my finger.
 
 [task_4](https://youtu.be/KBXVvA9q3zI)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KBXVvA9q3zI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Task 5: Musical C Note
 Finally, I wrote code that turns on the board's LED when a musical c note is played. If not, the LED turns off. 
@@ -39,6 +43,8 @@ Arduino code logic:
 
 
 [task_5](https://youtu.be/IyVRt3Y_dtY)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IyVRt3Y_dtY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Discussion
 In this lab, I learned the basics of working with Arduino and the Artimis Nano board. This lab also help verify that my board is functioning correctly.
