@@ -64,6 +64,16 @@ The result of the LPF is shown below. As can be seen by the plots, the LPF cuts 
 
 ## Task 3: Gyroscope
 
+To compute orientation from gyroscope data, we need to integrate the angular rates over time using the formulas below.
+
+$\theta_g = \theta_g + g_y dt$
+$\phi_g = \phi_g + g_x dt$
+$\psi_g = \psi_g + g_z dt$
+
+In Arduino:
+
+![image](https://github.com/user-attachments/assets/1dc30b1d-103d-4f92-98a9-b84745b89963)
+
 
 
 
