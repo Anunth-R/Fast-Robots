@@ -37,6 +37,11 @@ Or in Arduino code:
 
 Note that there is a 1.03 factor in front of both equations. This is because after preforming a two point calibration, I found I needed a correction factor of 1.03 on both pitch and roll. Data after the two point calibration for a +90 and negative 90 degree rotations are shown for both pitch and roll.
 
+![roll_90_pos](https://github.com/user-attachments/assets/f4c4294f-bb6c-4287-acd9-e04163d25f74)
+![roll_90_neg](https://github.com/user-attachments/assets/a8c3c017-fbee-4ee1-9bdf-2f1829a4592f)
+
+
+
 As shown above, the data from the IMU has a fair amount of high frequency noise. To remove this noise, I collected roll and pitch data as I periodically rotated the IMU as shown below.
 
 Pitch data:
