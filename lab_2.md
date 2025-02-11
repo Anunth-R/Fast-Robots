@@ -5,6 +5,11 @@ title: Lab 2
 
 # Lab 2
 
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
 ## Task 1: Setup
 To begin the lab, I installed the nessesary libraries for the IMU and plugged it directly into the Artemis. The ADR jumper was open on the breakout board so ADO-0 was set to 1. I then ran the Example1-Basics tutorial to test my IMU. The results shown below illustrate the IMU's ability to measure acceleration, angular rate, and magnatometer data.
 
