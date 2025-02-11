@@ -88,6 +88,32 @@ $\theta_{fused} = (1 - \alpha)(\theta_{fused} + g_y dt) + \theta_a \gamma $
 
 $\phi_{fused} = (1 - \alpha)(\phi_{fused} + g_x dt) + \phi_a \gamma $
 
+After some experimentation, I found that $\gamma = 0.8$ produced the best results.
+
+Arduino code:
+
+![image](https://github.com/user-attachments/assets/a211981e-23bd-4925-84bc-1e884775f38b)
+
+## Task 4: Sampling Data Fast
+
+To sample data as quickly as possible, I implemented get_imu_data() which encapsulates all of the previous functionality into a function. I then called this function in the main loop whenever data is ready and a data collection flag rec_data was set to true.
+
+Arduino code:
+
+![image](https://github.com/user-attachments/assets/226e3729-ee09-4fca-96dc-9a02ce805f87)
+
+To start and stop/transmit recorded data, I implemented two more commands that can be called over Bluetooth by my computer.
+
+![image](https://github.com/user-attachments/assets/0b2547b1-55ac-437f-9e6c-bfd7b831b21f)
+
+![image](https://github.com/user-attachments/assets/2b8739b6-fbe8-469a-a661-76b8d991136a)
+
+After removing all of the delays, I was able to collect data for over 5s at a sampling rate of 
+
+
+
+
+
 
 
 
