@@ -100,7 +100,7 @@ As can be seen below, the complimentary filter prevents drift over time in the f
 
 ![roll_fused](https://github.com/user-attachments/assets/2f087917-2fe3-4827-b6c9-913bb83029fd)
 
-It also does a good job of recjecting random vibrations.
+It also does a good job of rejecting random vibrations.
 
 ![image](https://github.com/user-attachments/assets/3df5ac82-0452-4071-a03a-2201940545ad)
 
