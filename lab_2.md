@@ -24,6 +24,35 @@ Or in Arduino code:
 
 ![image](https://github.com/user-attachments/assets/e2710dcc-00e6-4475-8a84-a7d2cb22b399)
 
+As shown above, the data from the IMU has a fair amount of high frequency noise. To remove this noise, I collected roll and pitch data as I periodically rotated the IMU as shown below.
+
+Pitch data:
+
+![Pitch](https://github.com/user-attachments/assets/bd92a185-ea58-4c74-bff3-d427f9e1d5f1)
+
+Roll data:
+
+![Roll](https://github.com/user-attachments/assets/4c4892c3-bb64-484f-a89b-564cd80b8e8a)
+
+To analyze the noise in this data, I preformed an FFT of the data. As can be seen by the FFT of the pitch data, most of the signal is contained between 0 and 6hz. Therefore, I can build a low pass filter to eliminate frequencies higher than that as they are likely noise.
+
+![Pitch_FFT](https://github.com/user-attachments/assets/c19edd5a-6cc1-4419-ac2f-df36b82bdc94)
+
+Using the following recursive formulas, we can construct a low pass filter:
+
+For pitch (very similar for roll):
+
+$\theta_{LP}[n] = \alpha \theta_{raw} + (1 - \alpha) \theta_{LP} [N - 1]$
+
+$\theta_{LP}[n-1] = \theta_{LP}[n]$
+
+
+
+
+
+
+
+
 
 
 
