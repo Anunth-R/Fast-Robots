@@ -94,6 +94,17 @@ Arduino code:
 
 ![image](https://github.com/user-attachments/assets/a211981e-23bd-4925-84bc-1e884775f38b)
 
+As can be seen below, the complimentary filter prevents drift over time in the fused signal.
+
+![fused_roll](https://github.com/user-attachments/assets/c44f4031-6ffd-43b9-bad0-eb32c5652b8a)
+
+![roll_fused](https://github.com/user-attachments/assets/2f087917-2fe3-4827-b6c9-913bb83029fd)
+
+It also does a good job of recjecting random vibrations.
+
+![image](https://github.com/user-attachments/assets/3df5ac82-0452-4071-a03a-2201940545ad)
+
+
 ## Task 4: Sampling Data Fast
 
 To sample data as quickly as possible, I implemented get_imu_data() which encapsulates all of the previous functionality into a function. I then called this function in the main loop whenever data is ready and a data collection flag rec_data was set to true.
