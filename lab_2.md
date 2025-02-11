@@ -42,9 +42,38 @@ Using the following recursive formulas, we can construct a low pass filter:
 
 For pitch (very similar for roll):
 
-$\theta_{LP}[n] = \alpha \theta_{raw} + (1 - \alpha) \theta_{LP} [N - 1]$
+$\theta_{LP}[n] = \alpha \theta_{raw} + (1 - \alpha) \theta_{LP} [n - 1]$
 
 $\theta_{LP}[n-1] = \theta_{LP}[n]$
+
+To determine $\alpha$ we can use the formulas below. The data above was collected at a sampling period T = 10ms. Setting $f_c$ to 5hz, we get an $\alpha$ of 0.266.
+
+$\alpha = \fraq{T}{T + RC}
+
+$f_c = \fraq{1}{2 \pi RC}$
+
+In Arduino:
+
+![image](https://github.com/user-attachments/assets/0f666821-8a19-4777-964f-dcd496897e20)
+
+The result of the LPF is shown below. As can be seen by the plots, the LPF cuts down a considerable amount of the high frequencty noise. 
+
+![Pitch_lp](https://github.com/user-attachments/assets/1e3c858d-72b7-456c-959e-c78c106eecf2)
+
+![Roll_lp](https://github.com/user-attachments/assets/77518a9a-ea0d-4069-b89f-fe3dd4e17d3f)
+
+## Task 3: Gyroscope
+
+
+
+
+
+
+
+
+
+
+
 
 
 
