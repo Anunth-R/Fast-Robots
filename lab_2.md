@@ -105,7 +105,7 @@ Arduino code:
 
 ![image](https://github.com/user-attachments/assets/a211981e-23bd-4925-84bc-1e884775f38b)
 
-As can be seen below, the complimentary filter prevents drift over time in the fused signal.
+As can be seen below, the complimentary filter prevents drift over time in the fused signal. After some experimentation, I determined that its working range contained both positive and negative rotations from about -90 to 90 degrees in both pitch and roll. Beyond that, the data seemed to be a little less reliable.
 
 ![fused_roll](https://github.com/user-attachments/assets/c44f4031-6ffd-43b9-bad0-eb32c5652b8a)
 
