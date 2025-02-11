@@ -33,7 +33,9 @@ $\phi_a = atan2(a_y,a_z)$
 
 Or in Arduino code:
 
-![image](https://github.com/user-attachments/assets/e2710dcc-00e6-4475-8a84-a7d2cb22b399)
+![image](https://github.com/user-attachments/assets/7e405ae1-08d2-447f-a01e-71177ee8be9b)
+
+Note that there is a 1.03 factor in front of both equations. This is because after preforming a two point calibration, I found I needed a correction factor of 1.03 on both pitch and roll. Data after the two point calibration for a +90 and negative 90 degree rotations are shown for both pitch and roll.
 
 As shown above, the data from the IMU has a fair amount of high frequency noise. To remove this noise, I collected roll and pitch data as I periodically rotated the IMU as shown below.
 
