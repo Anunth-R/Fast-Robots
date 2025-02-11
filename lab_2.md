@@ -48,9 +48,9 @@ $\theta_{LP}[n-1] = \theta_{LP}[n]$
 
 To determine $\alpha$ we can use the formulas below. The data above was collected at a sampling period T = 10ms. Setting $f_c$ to 5hz, we get an $\alpha$ of 0.266.
 
-$\alpha = \fraq{T}{T + RC}$
+$\alpha = \frac{T}{T + RC}$
 
-$f_c = \fraq{1}{2 \pi RC}$
+$f_c = \frac{1}{2 \pi RC}$
 
 In Arduino:
 
