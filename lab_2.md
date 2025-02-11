@@ -84,9 +84,9 @@ We can then overlay the gyroscope data with raw and filtered accelerometer data.
 
 To prevent drift, we can implement a complementary filter which fuses the gyroscope and filtered accelerometer data together.
 
-$theta_{fused}$ = (1 - \alpha)(\theta_{fused} + g_y dt) + \theta_a \gamma $
+$\theta_{fused} = (1 - \alpha)(\theta_{fused} + g_y dt) + \theta_a \gamma $
 
-$phi_{fused}$ = (1 - \alpha)(\phi_{fused} + g_x dt) + \phi_a \gamma $
+$\phi_{fused} = (1 - \alpha)(\phi_{fused} + g_x dt) + \phi_a \gamma $
 
 
 
