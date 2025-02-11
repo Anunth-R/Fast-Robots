@@ -108,7 +108,19 @@ To start and stop/transmit recorded data, I implemented two more commands that c
 
 ![image](https://github.com/user-attachments/assets/2b8739b6-fbe8-469a-a661-76b8d991136a)
 
-After removing all of the delays, I was able to collect data for over 5s at a sampling rate of 
+After removing all of the delays, I was able to collect data for over 5s at a sampling rate of 367hz.
+
+![image](https://github.com/user-attachments/assets/7eebe0bc-0919-48d0-898b-8b1f8b22eab9)
+
+![image](https://github.com/user-attachments/assets/e617c478-48ac-4855-b137-f1d12d0f002a)
+
+![image](https://github.com/user-attachments/assets/e5f0cd3d-1009-49c8-b979-3fb9599b160f)
+
+To store data, I used 3 float arrays for ptich, roll, and yaw. I selected floats over ints and doubles as they provide more accuracy compared to integers but take up less memory when compared to doubles. Therefore, I think that it is the perfect balance between the two. In all, the Artemis has 384kb of memory or or 33,000 float values. Since I am sampling at 367hz, this equates to about 1.5 min of data. This is not to bad for the Artemis. However, there will likely be other things that need to be stored other than just array data so this value will likely be lower.
+
+
+
+
 
 
 
