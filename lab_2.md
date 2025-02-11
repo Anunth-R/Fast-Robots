@@ -67,12 +67,28 @@ The result of the LPF is shown below. As can be seen by the plots, the LPF cuts 
 To compute orientation from gyroscope data, we need to integrate the angular rates over time using the formulas below.
 
 $\theta_g = \theta_g + g_y dt$
+
 $\phi_g = \phi_g + g_x dt$
+
 $\psi_g = \psi_g + g_z dt$
 
 In Arduino:
 
 ![image](https://github.com/user-attachments/assets/1dc30b1d-103d-4f92-98a9-b84745b89963)
+
+We can then overlay the gyroscope data with raw and filtered accelerometer data. From these plots, we can see that the gyroscope has much less noise even when compared to the filtered accelerometer data. However, it tends to drift over time away from the accelerometer measurements. 
+
+![gyro_drift_pitch](https://github.com/user-attachments/assets/ac6a5c91-309a-484e-b487-859345e341ff)
+
+![gyro_drift_roll](https://github.com/user-attachments/assets/bc1a5554-44da-41b8-8537-43b5a4e95ac9)
+
+To prevent drift, we can implement a complementary filter which fuses the gyroscope and filtered accelerometer data together.
+
+$theta_{fused}$ = (1 - \alpha)(\theta_{fused} + g_y dt) + \theta_a \gamma $
+
+$phi_{fused}$ = (1 - \alpha)(\phi_{fused} + g_x dt) + \phi_a \gamma $
+
+
 
 
 
