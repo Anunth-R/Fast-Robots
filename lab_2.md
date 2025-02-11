@@ -14,7 +14,7 @@ In addition, to make the IMU easier to work with, I added code that makes the IM
 
 ## Task 2: Accelerometer
 
-The accelerometer outputs acceleration in the x,y, and z axis. To convert these accelerations to pitch($\theta_a$) and roll($\phi_a), we can use the formulas below.
+The accelerometer outputs acceleration in the x,y, and z axis. To convert these accelerations to pitch ($\theta_a$) and roll ($\phi_a$), we can use the formulas below.
 
 
 
