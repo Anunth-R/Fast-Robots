@@ -154,7 +154,7 @@ After removing all of the delays, I was able to collect data for over 5s at a sa
 ![image](https://github.com/user-attachments/assets/8baec17a-997b-42ca-869a-4da1d7df4376)
 
 
-To store data, I used 3 float arrays for ptich, roll, and yaw. I selected floats over ints and doubles as they provide more accuracy compared to integers but take up less memory when compared to doubles. Therefore, I think that it is the perfect balance between the two. In all, the Artemis has 384kb of memory or or 33,000 float values. Since I am sampling at 367hz, this equates to about 1.5 min of data. This is not to bad for the Artemis. However, there will likely be other things that need to be stored other than just array data so this value will likely be lower.
+To store data, I used 3 float arrays for pitch, roll, and yaw. I selected floats over ints and doubles as they provide more accuracy compared to integers but take up less memory when compared to doubles. Therefore, I think that it is the perfect balance between the two. In all, the Artemis has 384kb of memory or or 33,000 float values. Since I am sampling at 367hz, this equates to about 1.5 min of data. This is not to bad for the Artemis. However, there will likely be other things that need to be stored other than just array data so this value will likely be lower.
 
 
 
