@@ -69,11 +69,7 @@ For pitch (very similar for roll):
 
 To determine $\alpha$ we can use the formulas below. The data above was collected at a sampling period T = 10ms. Setting $f_c$ to 5hz, we get an $\alpha$ of 0.266.
 
-$\alpha = \frac{T}{T + RC}$
-
-$f_c = \frac{1}{2 \pi RC}$
-
-<img src="https://github.com/user-attachments/assets/62da5f7d-7d45-4348-9331-ffc00310d61c" width="150">
+<img src="https://github.com/user-attachments/assets/0a148a29-1ce1-4cb3-b410-010dfbe0d198" width="300">
 
 In Arduino:
 
@@ -89,13 +85,7 @@ The result of the LPF is shown below. As can be seen by the plots, the LPF cuts 
 
 To compute orientation from gyroscope data, we need to integrate the angular rates over time using the formulas below.
 
-$\theta_g = \theta_g + g_y dt$
-
-$\phi_g = \phi_g + g_x dt$
-
-$\psi_g = \psi_g + g_z dt$
-
-<img src="https://github.com/user-attachments/assets/62da5f7d-7d45-4348-9331-ffc00310d61c" width="150">
+<img src="https://github.com/user-attachments/assets/1bde632b-6141-43c3-b61d-714fce1d82ae" width="300">
 
 In Arduino:
 
@@ -109,11 +99,7 @@ We can then overlay the gyroscope data with raw and filtered accelerometer data.
 
 To prevent drift, we can implement a complementary filter which fuses the gyroscope and filtered accelerometer data together.
 
-$\theta_{fused} = (1 - \alpha)(\theta_{fused} + g_y dt) + \theta_a \gamma $
-
-$\phi_{fused} = (1 - \alpha)(\phi_{fused} + g_x dt) + \phi_a \gamma $
-
-<img src="https://github.com/user-attachments/assets/62da5f7d-7d45-4348-9331-ffc00310d61c" width="150">
+<img src="https://github.com/user-attachments/assets/4b49c643-3c17-40dc-9b63-c7eccb3dc12b" width="300">
 
 After some experimentation, I found that 0.8 for gamma produced the best results.
 
