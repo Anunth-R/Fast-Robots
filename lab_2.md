@@ -156,6 +156,14 @@ After removing all of the delays, I was able to collect data for over 5s at a sa
 
 To store data, I used 3 float arrays for pitch, roll, and yaw. I selected floats over ints and doubles as they provide more accuracy compared to integers but take up less memory when compared to doubles. Therefore, I think that it is the perfect balance between the two. In all, the Artemis has 384kb of memory or or 33,000 float values. Since I am sampling at 367hz, this equates to about 1.5 min of data. This is not to bad for the Artemis. However, there will likely be other things that need to be stored other than just array data so this value will likely be lower.
 
+## Robot Video
+
+Below is a video of my robot driving around a study lounge. As shown, the robot's motors are very powerful and able to easily flip the car. I cannot wait to turn it into a cool robot. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DglJvvwAnV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 
 
 
