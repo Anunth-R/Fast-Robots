@@ -27,7 +27,8 @@ In addition, to make the IMU easier to work with, I added code that makes the IM
 
 The accelerometer outputs acceleration in the x,y, and z axis. To convert these accelerations to pitch ($\theta_a$) and roll ($\phi_a$), we can use the formulas below.
 
-![image](https://github.com/user-attachments/assets/c67b382b-6ac3-4b69-a862-03f12e0eb56b)
+![image](https://github.com/user-attachments/assets/91967372-174a-42a1-959e-cb11ab6d372a)
+
 
 
 Or in Arduino code:
