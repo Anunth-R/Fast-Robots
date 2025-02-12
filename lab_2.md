@@ -35,7 +35,7 @@ Or in Arduino code:
 
 ![image](https://github.com/user-attachments/assets/7e405ae1-08d2-447f-a01e-71177ee8be9b)
 
-Note that there is a 1.03 factor in front of both equations. This is because after preforming a two point calibration, I found I needed a correction factor of 1.03 on both pitch and roll. Data after the two point calibration for a +90 and negative 90 degree rotations are shown for both pitch and roll.
+Note that there is a 1.03 factor in front of both equations. This is because after preforming a two point calibration, I found I needed a correction factor of 1.03 on both pitch and roll. Data after the two point calibration for a (0 -> 90) deg and (0 -> -90) degree rotations are shown for both pitch and roll.
 
 
 Pitch             |  Roll
