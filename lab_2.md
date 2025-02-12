@@ -65,7 +65,7 @@ Using the following recursive formulas, we can construct a low pass filter:
 
 For pitch (very similar for roll):
 
-<img src="https://github.com/user-attachments/assets/92b4c2a3-464c-4b56-be78-baa4e03f306d" width="150">
+<img src="https://github.com/user-attachments/assets/92b4c2a3-464c-4b56-be78-baa4e03f306d" width="300">
 
 To determine $\alpha$ we can use the formulas below. The data above was collected at a sampling period T = 10ms. Setting $f_c$ to 5hz, we get an $\alpha$ of 0.266.
 
