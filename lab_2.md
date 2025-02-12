@@ -41,7 +41,7 @@ Note that there is a 1.03 factor in front of both equations. This is because aft
 Solarized dark             |  Solarized Ocean
 :-------------------------:|:-------------------------:
 ![roll_90_pos](https://github.com/user-attachments/assets/f4c4294f-bb6c-4287-acd9-e04163d25f74)  |  ![roll_90_neg](https://github.com/user-attachments/assets/a8c3c017-fbee-4ee1-9bdf-2f1829a4592f)
-
+![roll_90_pos](https://github.com/user-attachments/assets/f4c4294f-bb6c-4287-acd9-e04163d25f74)  |  ![roll_90_neg](https://github.com/user-attachments/assets/a8c3c017-fbee-4ee1-9bdf-2f1829a4592f)
 
 
 
