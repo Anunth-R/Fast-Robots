@@ -69,7 +69,7 @@ For pitch (very similar for roll):
 
 To determine alpha we can use the formulas below. The data above was collected at a sampling period T = 10ms. Setting f_c to 5hz, we get an alpha of 0.266.
 
-<img src="https://github.com/user-attachments/assets/0a148a29-1ce1-4cb3-b410-010dfbe0d198" width="150">
+<img src="https://github.com/user-attachments/assets/0a148a29-1ce1-4cb3-b410-010dfbe0d198" width="100">
 
 In Arduino:
 
@@ -85,7 +85,7 @@ The result of the LPF is shown below. As can be seen by the plots, the LPF cuts 
 
 To compute orientation from gyroscope data, we need to integrate the angular rates over time using the formulas below.
 
-<img src="https://github.com/user-attachments/assets/1bde632b-6141-43c3-b61d-714fce1d82ae" width="150">
+<img src="https://github.com/user-attachments/assets/1bde632b-6141-43c3-b61d-714fce1d82ae" width="125">
 
 In Arduino:
 
