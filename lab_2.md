@@ -65,15 +65,15 @@ Using the following recursive formulas, we can construct a low pass filter:
 
 For pitch (very similar for roll):
 
-$\theta_{LP}[n] = \alpha \theta_{raw} + (1 - \alpha) \theta_{LP} [n - 1]$
-
-$\theta_{LP}[n-1] = \theta_{LP}[n]$
+<img src="https://github.com/user-attachments/assets/92b4c2a3-464c-4b56-be78-baa4e03f306d" width="150">
 
 To determine $\alpha$ we can use the formulas below. The data above was collected at a sampling period T = 10ms. Setting $f_c$ to 5hz, we get an $\alpha$ of 0.266.
 
 $\alpha = \frac{T}{T + RC}$
 
 $f_c = \frac{1}{2 \pi RC}$
+
+<img src="https://github.com/user-attachments/assets/62da5f7d-7d45-4348-9331-ffc00310d61c" width="150">
 
 In Arduino:
 
@@ -95,6 +95,8 @@ $\phi_g = \phi_g + g_x dt$
 
 $\psi_g = \psi_g + g_z dt$
 
+<img src="https://github.com/user-attachments/assets/62da5f7d-7d45-4348-9331-ffc00310d61c" width="150">
+
 In Arduino:
 
 ![image](https://github.com/user-attachments/assets/1dc30b1d-103d-4f92-98a9-b84745b89963)
@@ -111,7 +113,9 @@ $\theta_{fused} = (1 - \alpha)(\theta_{fused} + g_y dt) + \theta_a \gamma $
 
 $\phi_{fused} = (1 - \alpha)(\phi_{fused} + g_x dt) + \phi_a \gamma $
 
-After some experimentation, I found that $\gamma = 0.8$ produced the best results.
+<img src="https://github.com/user-attachments/assets/62da5f7d-7d45-4348-9331-ffc00310d61c" width="150">
+
+After some experimentation, I found that 0.8 for gamma produced the best results.
 
 Arduino code:
 
