@@ -38,10 +38,11 @@ Or in Arduino code:
 Note that there is a 1.03 factor in front of both equations. This is because after preforming a two point calibration, I found I needed a correction factor of 1.03 on both pitch and roll. Data after the two point calibration for a +90 and negative 90 degree rotations are shown for both pitch and roll.
 
 
-Solarized dark             |  Solarized Ocean
+Pitch             |  Roll
 :-------------------------:|:-------------------------:
 ![pitch_neg_90](https://github.com/user-attachments/assets/681ed4e3-ad83-4e41-b51b-a56ae92ad447) |  ![roll_90_neg](https://github.com/user-attachments/assets/a8c3c017-fbee-4ee1-9bdf-2f1829a4592f)
-![pitch_90](https://github.com/user-attachments/assets/6622548a-b763-418b-83e8-132d3854dfb8) |  ![roll_90_neg](https://github.com/user-attachments/assets/a8c3c017-fbee-4ee1-9bdf-2f1829a4592f)
+![pitch_90](https://github.com/user-attachments/assets/6622548a-b763-418b-83e8-132d3854dfb8) |  ![roll_90_pos](https://github.com/user-attachments/assets/7497d06d-1033-44b7-b887-d2a2ecdfe0e6)
+
 
 
 
