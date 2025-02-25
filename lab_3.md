@@ -98,6 +98,17 @@ I also created bluetooth commands to start/stop recording data from all three se
 
 ![image](https://github.com/user-attachments/assets/e9048d15-2f01-426c-8dda-b8a6a4c3a44f)
 
+## IR Sensor Discussion
+IR sensors work by comparing emitted to recieved IR pulses. IR "distance" sensors measure the angle of reflected light and use that to compute distance. TOF sensors compute the time delay between emitted and recieved pulses. Theses types of sensors are typically very cheap, small, and require low power. A lidar is a more sophisticated sensors that continuously spins a laser beam to give distance measurements at different angles. These sensors are typically much more accurate but also bigger and more expensive.
+
+## Color and Texture
+To determine how color and texture impact the TOF sensors, I recorded TOF measurements on a yellow coat, blue notebook, and black box at different distances. Each of these materials has a different texture and color. The results are plotted below.
+
+![diff_mat](https://github.com/user-attachments/assets/27975bb4-bc83-4365-8519-80d1facb78d2)
+
+As shown by the plot above, the TOF sensor appears to be robust to different materials and colors. 
+
+
 
 
 
