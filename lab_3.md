@@ -83,7 +83,7 @@ It takes about 10ms between loop interations and about 100ms between sensor meas
 
 ![tof_fast](https://github.com/user-attachments/assets/fb1cb41f-adfd-4acc-a006-aaed20884f73)
 
-It took about 5000ms to transmit 100 measurements so the ranging time of the sensor is about 50ms. This leads to a max sampling rate of about 20Hz which is less than the datasheet of 50hz. Howoever, this discrepency might be because of limitations of the Artemis board or the way the sensor library was implemented.
+It took about 5000ms to transmit 100 measurements so the ranging time of the sensor is about 50ms. The ranging time is not likely to change vs distance as the speed of light is much faster than the distances we are measuring. This leads to a max sampling rate of about 20Hz which is less than the datasheet of 50hz. However, this discrepency might be because of limitations of the Artemis board or the way the sensor library was implemented.
 
 
 ## 2 TOF Sensors and IMU over bluetooth
