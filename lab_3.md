@@ -29,6 +29,15 @@ With the soldering complete, we can connect a single sensor and IMU to the multi
 
 0x69 corresponds to the IMU and 0x29 corresponds to the TOF sensor. This means that we must change one sensor to an address that is not 0x69 and we should be good to go. One interesting note is that 0x29 does not match 0x52 from the datasheet. This is because the last bit is omitted from the address which halves its equivelent decimal value changing the address to 0x29.
 
+## TOF Sensor Mode Selection and Data Collection
+
+The TOF sensor has a short and long mode. The long mode gives longer sensor range while sacrificing some robustness to ambient light. Therefore, I selected the short mode as I envision that the TOF sensor will primarily be used for obstacle avoidance. In this use case, the sensor only needs to operate at close range so this mode seems optimal. Shown below is data outputed to the serial monitor using that mode. 
+
+![raw_data_short](https://github.com/user-attachments/assets/5da3ab80-60ae-4598-b3b3-9b278ac141f2)
+
+
+
+
 
 
 
