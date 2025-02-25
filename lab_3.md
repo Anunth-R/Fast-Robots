@@ -88,7 +88,7 @@ It took about 5000ms to transmit 100 measurements so the ranging time of the sen
 
 ## 2 TOF Sensors and IMU over bluetooth
 
-It is also important to be able to collect data from all sensors and transmit that data over bluetooth. To do this, I created functions for each sensor and called them in the main loop whenever data was avialable.
+It is also important to be able to collect data from all sensors and transmit that data over bluetooth. To do this, I created functions for each sensor and called them in the main loop whenever data was available.
 
 ![image](https://github.com/user-attachments/assets/ed02e96c-2554-456e-8bd7-ece5da106aa7)
 
@@ -96,7 +96,16 @@ I also created bluetooth commands to start/stop recording data from all three se
 
 ![image](https://github.com/user-attachments/assets/3ce39714-f39d-4e08-9b0c-f6c336fcd41f)
 
-![image](https://github.com/user-attachments/assets/e9048d15-2f01-426c-8dda-b8a6a4c3a44f)
+![image](https://github.com/user-attachments/assets/2569a724-c845-4ea7-ba4d-737b4d138efc)
+
+
+The plots of the data transmitted over bluetooth are shown below. The senario was one TOF measuring a wall and the other TOF measuring a neaby object. The IMU sat on a level surface for the duration of the data collection. The data reflects this. 
+
+![2_TOF_data_collection](https://github.com/user-attachments/assets/437cfc0e-5b77-4bc5-9de4-1c0c21a5c9fd)
+
+![IMU_Data](https://github.com/user-attachments/assets/ab028b33-86a4-431b-b2a9-47c79e5b7d4e)
+
+
 
 ## IR Sensor Discussion
 IR sensors work by comparing emitted to recieved IR pulses. IR "distance" sensors measure the angle of reflected light and use that to compute distance. TOF sensors compute the time delay between emitted and recieved pulses. Theses types of sensors are typically very cheap, small, and require low power. A lidar is a more sophisticated sensors that continuously spins a laser beam to give distance measurements at different angles. These sensors are typically much more accurate but also bigger and more expensive.
