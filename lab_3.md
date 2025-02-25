@@ -43,7 +43,52 @@ Using the data from this experiment, I plotted the the measured vs true range of
 
 ![dis_vs_dis](https://github.com/user-attachments/assets/799bd926-070a-49d3-8b15-e14c0a554cd7)
 
-From the data above we can see that the the sensor is fairly accurate in the intermediate range of the data.
+From the data above we can see that the the sensor is fairly accurate in the intermediate range of the data. However, the closest data point seems to deviate a littel bit from the true value indicating that the sensor likely is not the best at extremely close range (within 2in). This is important to keep in mind when preforming obstacle avoidance with the robot.
+
+We can further analyze this data by plotting the standard deviation of the data at each distance as shown below.
+
+![std](https://github.com/user-attachments/assets/75a952f9-dd5b-4ef5-9bc4-491badc1122a)
+
+The standard deviation generally increases as the distace increases which makes sense. However, it is still within around 2mm even at the furthest distance. Therefore, it appears that the sensor is very precise in its measurements and has little random noise.
+
+Finally, we can plot the error of the sensor as a function of distance. 
+
+![error_dis](https://github.com/user-attachments/assets/2282052a-3606-4bd7-b2cb-e33e2c3c865a)
+
+As shown from the data above, the sensor is not perfectly accurate but some of this inaccuracy may come from my experimental setup. I was simply pushing a sensor attached to a box along a measuring tape which may not lead to the most reliable experimental data. However, what is evident is that the sensor is not accurate at close range. It deviated by over 20mm (0.78in) when measuring at a distance of 50.8mm (2in) which is horrible preformance. Therefore, it is important ot reiterate that the sensor should not be relied on at close range. However, it will produce good data at distances beyond that. Based on my experimentation, I did not find a max range of the data as the sensor still produced good data at 50in (1270mm). But the datasheet says the max range is 1.3m so it would be good to stay within that.
+
+## 2 TOF Sensors
+
+To use two TOF sensors at the same time, I wrote the following code to disable one sensor using XSHUT and change its I2C address. I changed the TOF sensor's address to 0x54. 
+
+![image](https://github.com/user-attachments/assets/6fbe0f71-81fe-4f76-9937-a81f5f521344)
+
+Then, using the code shown below I collected data from both TOF sensors.
+
+![image](https://github.com/user-attachments/assets/98108f13-34ce-40e0-a7fd-68cb6cadd584)
+
+Here is a video demonstrating this.
+
+## 2 TOF Sensors and IMU over bluetooth
+
+It is also important to be able to collect data from all sensors and transmit that data over bluetooth. To do this, I created functions for each sensor and called them in the main loop whenever data was avialable.
+
+![image](https://github.com/user-attachments/assets/ed02e96c-2554-456e-8bd7-ece5da106aa7)
+
+I also created bluetooth commands to start/stop recording data from all three sensors.
+
+![image](https://github.com/user-attachments/assets/3ce39714-f39d-4e08-9b0c-f6c336fcd41f)
+
+![image](https://github.com/user-attachments/assets/e9048d15-2f01-426c-8dda-b8a6a4c3a44f)
+
+
+
+
+
+
+
+
+
 
 
 
