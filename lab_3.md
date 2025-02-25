@@ -8,6 +8,8 @@ I began by figuring out what the overall circuit for my sensors would look like.
 
 ![Wiring Diagram (1)](https://github.com/user-attachments/assets/e07a25ec-351d-481c-b272-6307aef6f181)
 
-One important thing to note is that according to the datasheet, both I2C sensors have an address of 0x52. Therefore, I needed to wire XSHUT for one of the sensors to the Artemis's A2 pin. This will allow me to disable that sensor and change its I2C address. 
+One important thing to note is that according to the datasheet, both I2C sensors have an address of 0x52. Therefore, I needed to wire XSHUT for one of the sensors to the Artemis's A2 pin. This will allow me to disable that sensor and change its I2C address. In terms of sensor placement on the robot, I think that it will make sense to place one TOF at the front of the car and one TOF to the side to maximize coverage. 
+
+
 
 
