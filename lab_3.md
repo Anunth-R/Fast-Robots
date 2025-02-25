@@ -69,6 +69,23 @@ Then, using the code shown below I collected data from both TOF sensors.
 
 Here is a video demonstrating this.
 
+## TOF Sensor Sampling Speed
+
+To test the sampling speed of the TOF sensors, I wrote code that prints the time in milliseconds every interation of the loop and the data from the 2 TOF sensors if available. 
+
+![image](https://github.com/user-attachments/assets/b22391f2-3c4f-4a8f-8998-c62d353029a5)
+
+This outputs the following.
+
+![image](https://github.com/user-attachments/assets/a9e5a30c-fb4a-456a-bcd0-05ee0c00fd4d)
+
+It takes about 10ms between loop interations and about 100ms between sensor measurements. Therefore, it is clear that the limiting factor is the TOF sensors as they can only be sampled when data is ready. To get a better idea of the ranging time for a sensor, I stored 100 measurements of TOF data with accociated time stamps in an array and transmitted the data over bluetooth. Below is a plot of the data.
+
+![tof_fast](https://github.com/user-attachments/assets/fb1cb41f-adfd-4acc-a006-aaed20884f73)
+
+It took about 5000ms to transmit 100 measurements so the ranging time of the sensor is about 50ms. This leads to a max sampling rate of about 20Hz which is less than the datasheet of 50hz. Howoever, this discrepency might be because of limitations of the Artemis board or the way the sensor library was implemented.
+
+
 ## 2 TOF Sensors and IMU over bluetooth
 
 It is also important to be able to collect data from all sensors and transmit that data over bluetooth. To do this, I created functions for each sensor and called them in the main loop whenever data was avialable.
@@ -80,6 +97,8 @@ I also created bluetooth commands to start/stop recording data from all three se
 ![image](https://github.com/user-attachments/assets/3ce39714-f39d-4e08-9b0c-f6c336fcd41f)
 
 ![image](https://github.com/user-attachments/assets/e9048d15-2f01-426c-8dda-b8a6a4c3a44f)
+
+
 
 
 
