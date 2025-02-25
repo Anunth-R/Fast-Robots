@@ -23,7 +23,15 @@ The next task was to solder the long I2C cables to the TOF sensors and the XSHUT
 ![PXL_20250225_020459719 MP](https://github.com/user-attachments/assets/154baf22-275b-4442-a4f8-6fcb6f057be9)
 
 ## Scanning for I2C
-With the soldering complete, we can connect only a single sensor to the multiport and scan for its I2C address using the Wire_I2C example script. The output from the serial monitor is shown below.
+With the soldering complete, we can connect a single sensor and IMU to the multiport and scan for its I2C address using the Wire_I2C example script. The output from the serial monitor is shown below.
+
+![image](https://github.com/user-attachments/assets/5fa78ee2-7a00-4e98-a882-ab626bd3a597)
+
+0x69 corresponds to the IMU and 0x29 corresponds to the TOF sensor. This means that we must change one sensor to an address that is not 0x69 and we should be good to go. One interesting note is that 0x29 does not match 0x52 from the datasheet. This is because the last bit is omitted from the address which halves its equivelent decimal value changing the address to 0x29.
+
+
+
+
 
 
 
