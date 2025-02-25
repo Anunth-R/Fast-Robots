@@ -69,6 +69,8 @@ Then, using the code shown below I collected data from both TOF sensors.
 
 Here is a video demonstrating this.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AQ158v8rYTk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## TOF Sensor Sampling Speed
 
 To test the sampling speed of the TOF sensors, I wrote code that prints the time in milliseconds every interation of the loop and the data from the 2 TOF sensors if available. 
