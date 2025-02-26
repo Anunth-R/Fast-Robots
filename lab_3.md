@@ -37,7 +37,7 @@ The TOF sensor has a short and long mode. The long mode gives longer sensor rang
 ## TOF Sensor Preformance
 To evaluate the preformace of the TOF sensor, I preformed two experiments. In the first experiment, I collected 100 samples of TOF data at each distance ranging from 2in to 50in at 2in intervals. The experimental setup is shown below.
 
-![raw_data_short](https://github.com/user-attachments/assets/6545f95c-9fc0-4da5-b131-d07250d5771d)
+![PXL_20250222_210017554 MP (1)](https://github.com/user-attachments/assets/2c5cb891-c313-4631-ad34-a14f39b65707)
 
 Using the data from this experiment, I plotted the the measured vs true range of the TOF sensor as shown below.
 
