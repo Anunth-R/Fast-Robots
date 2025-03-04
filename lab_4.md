@@ -23,6 +23,8 @@ I then hooked the outputs of a motor driver to an oscilloscope and powered them 
 
 As shown in the video below, you can see the oscilloscope cycling between both PWM readings indicating that the motor driver is functioning properly. I then hooked up the other motor driver to verify that it was also functionng properly.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PLM8cwRBdes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 
