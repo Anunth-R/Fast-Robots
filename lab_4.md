@@ -17,11 +17,13 @@ I began by parrellel coupling the motor drivers and soldering them to the Artemi
 
 ![image](https://github.com/user-attachments/assets/6ad7a34b-11e2-460d-9c29-e15524bce9e0)
 
-I then hooked the outputs of a motor driver to an oscilloscope and powered them off of a DC power supply. I set the power supply to 3.7V and 2A as these settings would adaquately mimick the battery. While the motor drivers can theoretically handle more power, 2A should be sufficient for testing.
+I then hooked the outputs of a motor driver to an oscilloscope and powered them off of a DC power supply. I set the power supply to 3.7V with a 2A current limit as these settings would adaquately replicate the battery. While the motor drivers can theoretically handle more current, 2A should be sufficient for testing.
 
 ![osc_setup](https://github.com/user-attachments/assets/706c60a5-a5a0-4560-95d2-65f44f8f668b)
 
 As shown in the video below, you can see the oscilloscope cycling between both PWM readings indicating that the motor driver is functioning properly. I then hooked up the other motor driver to verify that it was also functionng properly.
+
+
 
 
 
