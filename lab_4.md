@@ -13,7 +13,7 @@ The motor drivers have been parrellel coupled to increase the amount of current 
 When building my circuit, I decided to try and make my wires as short as possible. I also tried to use stranded wire whenever I could to minmize the chance of a wire breaking. 
 
 # Soldering Motor Drivers to the Artemis/PWM Testing 
-I began by parrellel coupling the motor drivers and soldering them to the Artemis. However, before soldering the motor drivers to the motors and 850 battery wires, I inspected the PWM signals outputed by the motor drivers. To accomplish this, I wrote Artduino code shown below that cycles between two PWM signals.
+I began by parrellel coupling the motor drivers and soldering them to the Artemis A0,A1,A4,A5 pins. However, before soldering the motor drivers to the motors and 850mah battery wires, I inspected the PWM signals outputed by the motor drivers. To accomplish this, I wrote Artduino code shown below that cycles between two PWM signals.
 
 ![image](https://github.com/user-attachments/assets/6ad7a34b-11e2-460d-9c29-e15524bce9e0)
 
@@ -24,6 +24,23 @@ I then hooked the outputs of a motor driver to an oscilloscope and powered them 
 As shown in the video below, you can see the oscilloscope cycling between both PWM readings indicating that the motor driver is functioning properly. I then hooked up the other motor driver to verify that it was also functionng properly.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PLM8cwRBdes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Dismatling the Car
+To proceed further, I needed to take apart my car. I unscrewed the lid of the car and cut out the factory PCB. This will allow me to attach my own motor dirvers and control circuitry to the car.
+
+# Soldering the Motors
+With the factory PCB removed, I soldered the outputs of each of the motor drivers to the motors. I held off on soldering the motor drivers to the batteries and instead still powered them through the DC power supply.
+
+![motor_power_supply](https://github.com/user-attachments/assets/e4c706cf-5aeb-4b89-99a0-020aee23666a)
+
+I then wrote Arduino code to move one of the motors forwards and backwards. 
+
+![image](https://github.com/user-attachments/assets/9f223d16-df4e-4704-a06b-95a32628ae28)
+
+As shown below, the motors successfully move forwards and backwards using the motor drivers.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PLM8cwRBdes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 
