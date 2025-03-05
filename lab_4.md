@@ -60,6 +60,34 @@ With all of the soldering complete, we can now integrate all of these components
 # Minimum PWM
 With my car fully integrated, I explored the minimum PWM I could supply to my motors that would still allow my motors to move forwards. I found that to somply move forwards, each motor required a PWM of atleast 35. Turning was a completely different story. I needed to supply a PWM of 100 to each motor in oposite directions to allow the car to turn. This however makes sense as the car has to overcome a lot more friction compared to just driving forwards. Therefore, a higher pwm signal is needed for each motor. 
 
+# Driving Straight
+It is now time to drive the car! First logical task is to get it to go in a straight line. I began by simply applying a PWM signal of 80 to both motors. However, I found that my car veered to the left. Therefore, to make my car go straight, I found that I needed to multiply the PWM sent to my left motor by about 1.31. The code used to make the car drive straight is shown below.
+
+![image](https://github.com/user-attachments/assets/5ef738f5-b869-44b4-a3de-3a0e1dc197a2)
+
+Here is a video of the car driving straight for about 9ft.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mbUZHdDoPtI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Open Loop Control
+Now that the car can move straight, I tried to mess around with what I could do in open loop by making the car move in a box. Here is the code that I used to achieve that.
+
+![image](https://github.com/user-attachments/assets/bc7bb1c7-cea0-450c-916d-0b6859bf1766)
+
+Here is a video of it attempting the box. As you can see, it is not perfect. However, I think that PID control using the car's IMU will make its movement much more precise.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mU4ZCq14TmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
