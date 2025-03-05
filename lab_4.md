@@ -57,6 +57,9 @@ With all of the soldering complete, we can now integrate all of these components
 
 ![Untitled drawing (2)](https://github.com/user-attachments/assets/7c6a0d0b-db09-474c-8def-7c2185360238)
 
+# Minimum PWM
+With my car fully integrated, I explored the minimum PWM I could supply to my motors that would still allow my motors to move forwards. I found that to somply move forwards, each motor required a PWM of atleast 35. Turning was a completely different story. I needed to supply a PWM of 100 to each motor in oposite directions to allow the car to turn. This however makes sense as the car has to overcome a lot more friction compared to just driving forwards. Therefore, a higher pwm signal is needed for each motor. 
+
 
 
 
