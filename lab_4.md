@@ -33,7 +33,11 @@ With the factory PCB removed, I soldered the outputs of each of the motor driver
 
 ![motor_power_supply](https://github.com/user-attachments/assets/e4c706cf-5aeb-4b89-99a0-020aee23666a)
 
-I then wrote Arduino code to move one of the motors forwards and backwards. 
+I then wrote Arduino code to move one of the motors forwards and backwards. Here are definitions that will be used for the remainder of the code below.
+
+![image](https://github.com/user-attachments/assets/2905c605-8470-4cee-8493-eec49239eaed)
+
+Here is the code that moves the motor in both directions.
 
 ![image](https://github.com/user-attachments/assets/9f223d16-df4e-4704-a06b-95a32628ae28)
 
