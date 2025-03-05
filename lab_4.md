@@ -25,7 +25,7 @@ As shown in the video below, you can see the oscilloscope cycling between both P
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/PLM8cwRBdes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-# Dismatling the Car
+# Dismantling the Car
 To proceed further, I needed to take apart my car. I unscrewed the lid of the car and cut out the factory PCB. This will allow me to attach my own motor dirvers and control circuitry to the car.
 
 # Soldering the Motors
@@ -37,7 +37,7 @@ I then wrote Arduino code to move one of the motors forwards and backwards. Here
 
 ![image](https://github.com/user-attachments/assets/2905c605-8470-4cee-8493-eec49239eaed)
 
-Here is the code that moves the motor in both directions.
+This code that moves the motor in both directions.
 
 ![image](https://github.com/user-attachments/assets/9f223d16-df4e-4704-a06b-95a32628ae28)
 
@@ -52,7 +52,7 @@ Below shows a video of one set of wheels spinning off of battery power. The car 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7-zsSJoXtN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-We can also command both motors to spin. Code to do that is shown below..
+We can also command both motors to spin. Code to do that is shown below.
 
 ![image](https://github.com/user-attachments/assets/b990fd34-ef9c-4c1f-ac51-de8da11728d6)
 
