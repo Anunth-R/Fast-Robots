@@ -39,7 +39,24 @@ I then wrote Arduino code to move one of the motors forwards and backwards.
 
 As shown below, the motors successfully move forwards and backwards using the motor drivers.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PLM8cwRBdes" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V0_QVrS8n7w" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Battery Power
+Instead of powering the motor drivers off of an external power supply, I next powered them off of the 850mah battery. To do this, I soldered the battery power wires to the motor driver. I also switched to powering the Artemis off of its own 750mah battery. I then ran the same code above.
+
+Below shows a video of one set of wheels spinning off of battery power. The car is now completely untethered from from any external sources.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7-zsSJoXtN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+We can also command both motors to spin.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zWqXxAawIWw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Car Layout
+With all of the soldering complete, we can now integrate all of these components into the car. Below shows an image of the current layout of my car. I decided to use rubber bands to secure the components as they seem to hold the components firmly in place while still allowing me to manipulate them when needed.
+
+![Untitled drawing (2)](https://github.com/user-attachments/assets/7c6a0d0b-db09-474c-8def-7c2185360238)
+
 
 
 
