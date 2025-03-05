@@ -95,7 +95,7 @@ As shown above in the lower right corner, the PWM frequency is about 183hz. One 
 
 
 ## Lowest PWM Value 
-To explore the lowest PWM value once in motion, I provided a burst of pwm at 40 for half a second and experimented with how low I could lower the pwm for the remaining 4 seconds. I needed to use 40 rather than the 35 I had determined previously as my battery was less charged than before. I found that I could lower the right motor's pwm down to 34 and the left pwm down to 32 and still move the car forwards after the initial burst of pwm. Here is the code used to accomplish that.
+To explore the lowest PWM value once in motion, I provided a burst of pwm at 40 for half a second and experimented with how low I could lower the pwm for the remaining 4 seconds. I needed to use 40 rather than the 35 I had determined previously as my battery was less charged than before. I found that I could lower the right motor's pwm down to 34 and the left pwm down to 32 and still move the car forwards after the initial burst of pwm. Here is the code used to accomplish that. Based on the video, it seems that the car settles on its slowest speed really fast.
 
 ![image](https://github.com/user-attachments/assets/3a99add5-01a2-4c92-a8d6-ee16225555bc)
 
