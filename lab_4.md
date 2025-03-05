@@ -48,7 +48,11 @@ Below shows a video of one set of wheels spinning off of battery power. The car 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7-zsSJoXtN4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-We can also command both motors to spin.
+We can also command both motors to spin. Code to do that is shown below..
+
+![image](https://github.com/user-attachments/assets/b990fd34-ef9c-4c1f-ac51-de8da11728d6)
+
+Here is a video.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zWqXxAawIWw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
