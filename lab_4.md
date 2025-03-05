@@ -91,7 +91,7 @@ To determine the frequency of the pwm signal sent by analog read, we can look at
 
 ![image](https://github.com/user-attachments/assets/95b7b2f5-a309-427f-8818-b917b9463210)
 
-As shown above in the lower right corner, the PWM frequency is about 183hz. 
+As shown above in the lower right corner, the PWM frequency is about 183hz. One benifit of manually increasing this frequency is to deliver a smoother signal to the motor. The faster you can deliver a pwm frequency, the smoother the average voltage the motor will recieve. This will lead to less choppiness in your motor and overall better control of it. 
 
 
 ## Lowest PWM Value 
