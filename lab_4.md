@@ -86,6 +86,21 @@ Here is a video of it attempting the box. As you can see, it is not perfect. How
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mU4ZCq14TmE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+## Analog Write Discussion
+
+## Lowest PWM Value 
+To explore the lowest PWM value once in motion, I provided a burst of pwm at 40 for half a second and experimented with how low I could lower the pwm for the remaining 4 seconds. I needed to use 40 rather than the 35 I had determined previously as my battery was less charged than before. I found that I could lower the right motor's pwm down to 34 and the left pwm down to 32 and still move the car forwards after the initial burst of pwm. Here is the code used to accomplish that.
+
+![image](https://github.com/user-attachments/assets/3a99add5-01a2-4c92-a8d6-ee16225555bc)
+
+Shown below is a video demonstrating the car moving forward for about 4 seconds. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mbEqu0SZwQQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
+
 
 
 
