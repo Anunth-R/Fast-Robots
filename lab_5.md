@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Lab 4
+title: Lab 5
 ---
 
-## Prelab
+# Prelab
 To make my life easier during the lab, I made a number of improvements to my BLE script. First, I implemented a command_motors function which translates power values between 0-1 to pwm signals to the motors. This function automatically scales the pwm values to account for the minimum pwm value to take the motors out of deadband. 
 
 ![image](https://github.com/user-attachments/assets/159335c0-1e21-4877-8ba4-713a247e24f0)
@@ -22,7 +22,7 @@ in addition, I initialized a new array u_array that keeps track of the command s
 
 
 
-## Sampling Frequency
+# Sampling Frequency
 Before we can implement PID control, we must first configure the TOF sensor. I selected the TOF short mode because it provides the highest possible sampling frequency out of all other modes and the least sensor noise. These qualities are important as the controller must recieve data fast enough to allow the PID controller to react quickly to obstacles and not be too noisy as to cause the derivative term to go haywire. The TOF short mode with a timing budget of 20ms allows us to achieve this. 
 
 ![image](https://github.com/user-attachments/assets/05240319-8f96-4494-b6ff-21d1a933eb67)
@@ -33,7 +33,7 @@ We can verify this sampling rate by running code very similar to that in lab 3 w
 
 After sending the accociated measurements and time stamps over bluetooth, I found that I was able to achieve a sampling rate of 45hz which was close to theoretical sampling rate of 50hz on the datasheet. 
 
-## P Controller
+# P Controller
 With the TOF sensor properly configured, I began implementing a simple p controller using the function shown below. To calculate a good starting point for kp, I knew that the max range I was recieving from my distance sensor was about 2000mm. I wanted this to correspond to a motor command signal of 1 which indicates that the max value of kp should be around 0.0005. However, this caused significant overshoot and I had to reduce kp to 0.00009 to prevent the car from hitting the wall when trying to stop at a set point 1ft from the wall.
 
 ![image](https://github.com/user-attachments/assets/10f8885f-32ad-451c-b7e8-f2f17cb77540)
@@ -52,7 +52,7 @@ Here is the accociated video.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1jN3yShu2qo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## PID Controller
+# PID Controller
 One of the most distinct features of the P controller is the large overshoot. This could cause crashes at higher speeds. To compensate for this, I added a derivative term which will act as a damper to reduce that overshoot. This term corresponds to the velocity of the robot estimated from successive distance measurements multiplied by a weighting factor kd. I also added a very small integral term to remove any small steady state errors in my controller. This term estimates the integral of the errror by adding each new error to a Riemann sum and multiplying it by a weighting factor ki. 
 
 ![pid_control_function](https://github.com/user-attachments/assets/4a1628bf-3bd6-49c4-97bb-6ad15453426f)
@@ -67,7 +67,7 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/8jFeltGZWK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  ## Data Extrapolation
+  # Data Extrapolation
   One important thing to note is that the PID loop rate is currently tied to the rate that data can be sampled from the TOF sensor. One possible solution to this is to move the PID control function outside of the conditional checking for a new measurement. 
 
   ![pid_loop_rate](https://github.com/user-attachments/assets/782b7dc8-5b2b-4825-a2ed-a75e661536ad)
@@ -98,7 +98,7 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   The controller with extrapolation preformed similar to before but now running at a much faster rate allowing the controller to respond quicker to a dynamically changing environment. 
 
-  ## Low Pass Filter
+  # Low Pass Filter
   One thing that became very apparent to me was how noisy my control signal had become. This was because the derivative term amplifies high frequency noise from the sensors. To compensate for this, I added a low pass filter on the derivative term with alpha = 0.01.
 
   ![image](https://github.com/user-attachments/assets/79924165-cc4b-4f0c-9800-c3a1346cdbe6)
@@ -109,7 +109,7 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   ![filtered_pid_control_signal](https://github.com/user-attachments/assets/77db2efc-f983-4de3-a6d4-4ac7c02841bf)
 
-  ## Windup Protection
+  # Windup Protection
   One consequence of including an integral term in my controller is that windup can cause instability in the controller. For example, here is a video below showing my foot pinning my car for 5 seconds before releasing it. The car slammed into the obstacle because the integral term completely saturated the control inputs. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_JnH1ccdLDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -122,14 +122,14 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/59bCQnYdNXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  ## Controller Robustness
+  # Controller Robustness
 With all of these ehancements to the controller, the following videos demonstrate the controller's ability function across different starting distances and surfaces.
 
 Short Distance:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7olcgQK0m3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  ## Discussion
+  # Discussion
   I really enjoyed implementing PID control on my robot especially because I am also taking the feedback control class this semester. Therefore, this lab gave me a valuable opportunity to see the theory I had learned in that class applied to a real robotic system. 
 
   
