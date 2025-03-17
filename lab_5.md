@@ -2,7 +2,7 @@
 layout: default
 title: Lab 4
 ---
-## Task 1 Sampling Frequency
+## Sampling Frequency
 Before we can implement PID control, we must first configure the TOF sensor. I selected the TOF short mode because it provides the highest possible sampling frequency out of all other modes and the least sensor noise. These qualities are important as the controller must recieve data fast enough to allow the PID controller to react quickly to obstacles and not be too noisy as to cause the derivative term to go haywire. The TOF short mode with a timing budget of 20ms allows us to achieve this. 
 
 ![image](https://github.com/user-attachments/assets/05240319-8f96-4494-b6ff-21d1a933eb67)
@@ -27,6 +27,26 @@ The p controller resulted in the following plots of distance and command signal 
 ![p_distance](https://github.com/user-attachments/assets/3c93a671-8366-410f-8116-e8621fcfe27e)
 
 ![p_control_signal](https://github.com/user-attachments/assets/fbd9766e-195d-47a9-983c-89ef04a48a80)
+
+## PID Controller
+One of the most distinct features of the P controller is the large overshoot. This could cause crashes at higher speeds. To compensate for this, I added a derivative term which will act as a damper to reduce that overshoot. This term corresponds to the velocity of the robot estimated from successive distance measurements multiplied by a weighting factor kd. I also added a very small integral term to remove any small steady state errors in my controller. This term estimates the integral of the errror by adding each new error to a Riemann sum and multiplying it by a weighting factor ki. 
+
+![pid_control_function](https://github.com/user-attachments/assets/4a1628bf-3bd6-49c4-97bb-6ad15453426f)
+
+  One important note is that I found it helpful to express kd and ki in terms of kp for ease of tuning. After tuning the controller, I found that kp = 0.0002 and kd = kp/2 produced a very nice response with minimal overshoot. I also sprinkled in ki = kp/100 just to eliminate any long term steady state errors. The accociated distance and command signal plots are shown below. The orange line corresponds to the setpoint target. 
+
+  ![pid_distance](https://github.com/user-attachments/assets/a4d6a318-d9f8-43ff-992b-fc93a639c6de)
+
+  ![pid_control_signal](https://github.com/user-attachments/assets/d85ed693-f568-43d8-97b2-2748c729bd36)
+
+  ## Data Extrapolation
+  One important thing to note is that 
+
+
+
+
+
+
 
 
 
