@@ -112,6 +112,7 @@ One of the most distinct features of the P controller is the large overshoot. Th
   ![filtered_pid_control_signal](https://github.com/user-attachments/assets/77db2efc-f983-4de3-a6d4-4ac7c02841bf)
 
   # Windup Protection
+  
   One consequence of including an integral term in my controller is that windup can cause instability in the controller. For example, here is a video below showing my foot pinning my car for 5 seconds before releasing it. The car slammed into the obstacle because the integral term completely saturated the control inputs. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_JnH1ccdLDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -125,6 +126,7 @@ One of the most distinct features of the P controller is the large overshoot. Th
   <iframe width="560" height="315" src="https://www.youtube.com/embed/59bCQnYdNXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   # Controller Robustness
+  
 With all of these ehancements to the controller, the following videos demonstrate the controller's ability function across different starting distances and surfaces.
 
 Short Distance:
@@ -132,6 +134,7 @@ Short Distance:
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7olcgQK0m3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   # Discussion
+  
   I really enjoyed implementing PID control on my robot especially because I am also taking the feedback control class this semester. Therefore, this lab gave me a valuable opportunity to see the theory I had learned in that class applied to a real robotic system. 
 
   
