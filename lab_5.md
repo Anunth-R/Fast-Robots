@@ -12,15 +12,11 @@ I also added more commands to my BLE. Notably, I added commands START_CONTROLLER
 
 ![image](https://github.com/user-attachments/assets/5c79d61b-68eb-4750-859b-286fb262abf2)
 
-in addition, I initialized a new array u_array that keeps track of the command signals sent to the motors. When the STOP_TOF2 command implemented in lab 3 is called, this array along with the distance measurements and time stamps array are all transmitted to python to assist with debugging. 
-
-With these changes, the workflow in Python looks like the following.
+in addition, I initialized a new array u_array that keeps track of the command signals sent to the motors. When the STOP_TOF2 command implemented in lab 3 is called, this array along with the distance measurements and time stamps array are all transmitted to python to assist with debugging. With these changes, the workflow in Python looks like the following.
 
 ![image](https://github.com/user-attachments/assets/22e11369-afd9-4ad8-a59d-82601605f309)
 
-We run the first cell to start the controller and the second one to stop the controller and dump all of the accociated data into python.
-
-Finally, I added some safety logic to the BLE that stops the motors in case my computer looses connection to the robot.
+We run the first cell to start the controller and the second one to stop the controller and dump all of the accociated data into python. Finally, I added some safety logic to the BLE that stops the motors in case my computer looses connection to the robot.
 
 ![image](https://github.com/user-attachments/assets/0bb7416d-5f4b-4c9c-8834-155b8258755a)
 
@@ -102,9 +98,7 @@ One of the most distinct features of the P controller is the large overshoot. Th
   ![filtered_pid_control_signal](https://github.com/user-attachments/assets/77db2efc-f983-4de3-a6d4-4ac7c02841bf)
 
   ## Windup Protection
-  One consequence of including an integral term in my controller is that windup can cause instability in the controller. For example, here is a video below showing my foot pinning my car for 5 seconds before releasing it. The car slammed into the obstacle because the integral term completely saturated the control inputs.
-
-  To prevent this from happening, we can constrain the integrated error so that it can contribute no more that 0.15 to the total overall input signal.
+  One consequence of including an integral term in my controller is that windup can cause instability in the controller. For example, here is a video below showing my foot pinning my car for 5 seconds before releasing it. The car slammed into the obstacle because the integral term completely saturated the control inputs. To prevent this from happening, we can constrain the integrated error so that it can contribute no more that 0.15 to the total overall input signal.
 
 ![image](https://github.com/user-attachments/assets/90fa2e63-1293-4862-b9f3-a3027ce9ef2e)
 
