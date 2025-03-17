@@ -40,7 +40,28 @@ One of the most distinct features of the P controller is the large overshoot. Th
   ![pid_control_signal](https://github.com/user-attachments/assets/d85ed693-f568-43d8-97b2-2748c729bd36)
 
   ## Data Extrapolation
-  One important thing to note is that 
+  One important thing to note is that the PID loop rate is currently tied to the rate that data can be sampled from the TOF sensor. One possible solution to this is to move the PID control function outside of the conditional checking for a new measurement. 
+
+  ![pid_loop_rate](https://github.com/user-attachments/assets/782b7dc8-5b2b-4825-a2ed-a75e661536ad)
+
+  Now the PID loop can run at a much faster rate compared to before simply using the last recorded sensor measurement when no new sensor measurement is available. After transmiting the data from a run over to python and analyzing the time stamps, I found that the new sampling frequency was around 286hz which is over six times faster than the previous loop!
+
+  However, we can do better than just using the last sensor measurement. Instead, we can create an extrapolate function which uses the last two distance measurements to estimate the current velocity of the robot. We can then use that velocity to estimate what the new distance measurement should be even if we have no new data.
+
+  ![image](https://github.com/user-attachments/assets/ebf80b53-ca6b-4423-a190-e4295e9e5007)
+
+  Then in the main loop, we can supply our controller extrapolated sensor measurements if we have at least two previous sensor measurements and no new data is available. (It does not make sense to extrapolate with less than two measurements)
+
+  ![pid_main_loop_ext](https://github.com/user-attachments/assets/a8796880-6e52-411d-a06d-12397d838771)
+
+  We can see the effects of extapolation clearly when we overlay the extrapolated measurements with the TOF sensor measurements.
+
+  ![extrapolated_measured_distance](https://github.com/user-attachments/assets/1a06ada3-7bad-448a-8017-84f29d50fb18)
+
+  As shown above, as the robot's velocity does not change too much, extrapolation estimates the sensor measurements reasonably well. 
+
+
+
 
 
 
