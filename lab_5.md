@@ -16,7 +16,7 @@ in addition, I initialized a new array u_array that keeps track of the command s
 
 ![image](https://github.com/user-attachments/assets/22e11369-afd9-4ad8-a59d-82601605f309)
 
-We run the first cell to start the controller and the second one to stop the controller and dump all of the accociated data into python. Finally, I added some safety logic to the BLE that stops the motors in case my computer looses connection to the robot.
+  We can run the first cell to start the controller and the second one to stop the controller and dump all of the accociated data into python. Finally, I added some safety logic to the BLE that stops the motors in case my computer looses connection to the robot.
 
 ![image](https://github.com/user-attachments/assets/0bb7416d-5f4b-4c9c-8834-155b8258755a)
 
