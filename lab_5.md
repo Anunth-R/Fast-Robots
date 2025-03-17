@@ -135,7 +135,7 @@ Short Distance:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7olcgQK0m3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Long Distance:
+Long Distance (done with fully charged battery so more overshoot):
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QFAShP-qeIE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
