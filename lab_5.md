@@ -48,6 +48,10 @@ The p controller resulted in the following plots of distance and command signal 
 
 ![p_control_signal](https://github.com/user-attachments/assets/fbd9766e-195d-47a9-983c-89ef04a48a80)
 
+Here is the accociated video.
+
+
+
 ## PID Controller
 One of the most distinct features of the P controller is the large overshoot. This could cause crashes at higher speeds. To compensate for this, I added a derivative term which will act as a damper to reduce that overshoot. This term corresponds to the velocity of the robot estimated from successive distance measurements multiplied by a weighting factor kd. I also added a very small integral term to remove any small steady state errors in my controller. This term estimates the integral of the errror by adding each new error to a Riemann sum and multiplying it by a weighting factor ki. 
 
