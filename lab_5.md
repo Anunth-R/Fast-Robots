@@ -135,6 +135,22 @@ Short Distance:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7olcgQK0m3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Long Distance:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QFAShP-qeIE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Quick Reaction:
+
+This test shows the robot's ability to respond to a quickly appearing obstacle. The robot and obstacle was placed in a manner where the robot could not initially see the obstacle as the TOF sensor on my robot is angled upward and the obstacle is too short. However, as the robot gets closer, it is able to see the obstacle. This is hilighted by the distance plot below where the robot initially does not see anything (it reports nothing for 2.5m when there is clearly something there) but then quickly detects an obstacle and manages to stop without hitting it.
+
+![image](https://github.com/user-attachments/assets/2402260c-58d9-4087-b20c-33c85b9bc59a)
+
+Here is an accociated video. This would not have been possible without the faster loop speed of the PID controller.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Jgnd1GXYsXg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
 # Discussion
   
   I really enjoyed implementing PID control on my robot especially because I am also taking the feedback control class this semester. Therefore, this lab gave me a valuable opportunity to see the theory I had learned in that class applied to a real robotic system. 
