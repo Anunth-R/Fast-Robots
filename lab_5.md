@@ -67,7 +67,8 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/8jFeltGZWK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  # Data Extrapolation
+# Data Extrapolation
+
   One important thing to note is that the PID loop rate is currently tied to the rate that data can be sampled from the TOF sensor. One possible solution to this is to move the PID control function outside of the conditional checking for a new measurement. 
 
   ![pid_loop_rate](https://github.com/user-attachments/assets/782b7dc8-5b2b-4825-a2ed-a75e661536ad)
@@ -100,7 +101,8 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   The controller with extrapolation preformed similar to before but now running at a much faster rate allowing the controller to respond quicker to a dynamically changing environment. 
 
-  # Low Pass Filter
+# Low Pass Filter
+
   One thing that became very apparent to me was how noisy my control signal had become. This was because the derivative term amplifies high frequency noise from the sensors. To compensate for this, I added a low pass filter on the derivative term with alpha = 0.01.
 
   ![image](https://github.com/user-attachments/assets/79924165-cc4b-4f0c-9800-c3a1346cdbe6)
@@ -111,8 +113,8 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   ![filtered_pid_control_signal](https://github.com/user-attachments/assets/77db2efc-f983-4de3-a6d4-4ac7c02841bf)
 
-  # Windup Protection
-  
+# Windup Protection
+
   One consequence of including an integral term in my controller is that windup can cause instability in the controller. For example, here is a video below showing my foot pinning my car for 5 seconds before releasing it. The car slammed into the obstacle because the integral term completely saturated the control inputs. 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/_JnH1ccdLDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -125,7 +127,7 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   <iframe width="560" height="315" src="https://www.youtube.com/embed/59bCQnYdNXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  # Controller Robustness
+# Controller Robustness
   
 With all of these ehancements to the controller, the following videos demonstrate the controller's ability function across different starting distances and surfaces.
 
@@ -133,7 +135,7 @@ Short Distance:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7olcgQK0m3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-  # Discussion
+# Discussion
   
   I really enjoyed implementing PID control on my robot especially because I am also taking the feedback control class this semester. Therefore, this lab gave me a valuable opportunity to see the theory I had learned in that class applied to a real robotic system. 
 
