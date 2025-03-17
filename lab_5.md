@@ -50,7 +50,7 @@ The p controller resulted in the following plots of distance and command signal 
 
 Here is the accociated video.
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1jN3yShu2qo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## PID Controller
 One of the most distinct features of the P controller is the large overshoot. This could cause crashes at higher speeds. To compensate for this, I added a derivative term which will act as a damper to reduce that overshoot. This term corresponds to the velocity of the robot estimated from successive distance measurements multiplied by a weighting factor kd. I also added a very small integral term to remove any small steady state errors in my controller. This term estimates the integral of the errror by adding each new error to a Riemann sum and multiplying it by a weighting factor ki. 
@@ -62,6 +62,10 @@ One of the most distinct features of the P controller is the large overshoot. Th
   ![pid_distance](https://github.com/user-attachments/assets/a4d6a318-d9f8-43ff-992b-fc93a639c6de)
 
   ![pid_control_signal](https://github.com/user-attachments/assets/d85ed693-f568-43d8-97b2-2748c729bd36)
+
+  Here is a video demonstrating this.
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/8jFeltGZWK8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   ## Data Extrapolation
   One important thing to note is that the PID loop rate is currently tied to the rate that data can be sampled from the TOF sensor. One possible solution to this is to move the PID control function outside of the conditional checking for a new measurement. 
@@ -88,6 +92,10 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   ![pid_control_signal_ext](https://github.com/user-attachments/assets/a057335e-b778-4f7c-9afd-dd4798ece6b7)
 
+  Here is a video demonstrating this.
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/N64Rqb8w7Nc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
   The controller with extrapolation preformed similar to before but now running at a much faster rate allowing the controller to respond quicker to a dynamically changing environment. 
 
   ## Low Pass Filter
@@ -102,13 +110,24 @@ One of the most distinct features of the P controller is the large overshoot. Th
   ![filtered_pid_control_signal](https://github.com/user-attachments/assets/77db2efc-f983-4de3-a6d4-4ac7c02841bf)
 
   ## Windup Protection
-  One consequence of including an integral term in my controller is that windup can cause instability in the controller. For example, here is a video below showing my foot pinning my car for 5 seconds before releasing it. The car slammed into the obstacle because the integral term completely saturated the control inputs. To prevent this from happening, we can constrain the integrated error so that it can contribute no more that 0.15 to the total overall input signal.
+  One consequence of including an integral term in my controller is that windup can cause instability in the controller. For example, here is a video below showing my foot pinning my car for 5 seconds before releasing it. The car slammed into the obstacle because the integral term completely saturated the control inputs. 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_JnH1ccdLDU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  
+  To prevent this from happening, we can constrain the integrated error so that it can contribute no more that 0.15 to the total overall input signal.
 
 ![image](https://github.com/user-attachments/assets/90fa2e63-1293-4862-b9f3-a3027ce9ef2e)
 
   With windup protection, the car is still able to stop even after being pinned for 5 seconds.
 
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/59bCQnYdNXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
   ## Controller Robustness
+With all of these ehancements to the controller, the following videos demonstrate the controller's ability function across different starting distances and surfaces.
+
+Short Distance:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7olcgQK0m3k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
   ## Discussion
   I really enjoyed implementing PID control on my robot especially because I am also taking the feedback control class this semester. Therefore, this lab gave me a valuable opportunity to see the theory I had learned in that class applied to a real robotic system. 
