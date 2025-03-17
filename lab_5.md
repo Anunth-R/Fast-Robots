@@ -58,7 +58,45 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   ![extrapolated_measured_distance](https://github.com/user-attachments/assets/1a06ada3-7bad-448a-8017-84f29d50fb18)
 
-  As shown above, as the robot's velocity does not change too much, extrapolation estimates the sensor measurements reasonably well. 
+  As shown above, as the robot's velocity does not change too much, extrapolation estimates the sensor measurements reasonably well. The distance and motor input plots using extrapolation is shown below. 
+
+  ![pid_distance_ext](https://github.com/user-attachments/assets/9800a563-3c30-4ead-91ed-f51cddf6e689)
+
+  ![pid_control_signal_ext](https://github.com/user-attachments/assets/a057335e-b778-4f7c-9afd-dd4798ece6b7)
+
+  The controller with extrapolation preformed similar to before but now running at a much faster rate allowing the controller to respond quicker to a dynamically changing environment. 
+
+  ## Low Pass Filter
+  One thing that became very apparent to me was how noisy my control signal had become. This was because the derivative term amplifies high frequency noise from the sensors. To compensate for this, I added a low pass filter on the derivative term with alpha = 0.01.
+
+  ![image](https://github.com/user-attachments/assets/79924165-cc4b-4f0c-9800-c3a1346cdbe6)
+
+  This lead to much smoother distance curve and control inputs into my car as shown below. 
+
+  ![filtered_pid_distance](https://github.com/user-attachments/assets/52cc8aff-4dfe-4dba-b367-82b20ce522af)
+
+  ![filtered_pid_control_signal](https://github.com/user-attachments/assets/77db2efc-f983-4de3-a6d4-4ac7c02841bf)
+
+  ## Windup Protection
+  One consequence of including an integral term in my controller is that windup can cause instability in the controller. For example, here is a video below showing my foot pinning my car for 5 seconds before releasing it. The car slammed into the obstacle because the integral term completely saturated the control inputs.
+
+  To prevent this from happening, we can constrain the integrated error so that it can contribute no more that 0.15 to the total overall input signal.
+
+![image](https://github.com/user-attachments/assets/90fa2e63-1293-4862-b9f3-a3027ce9ef2e)
+
+  With windup protection, the car is still able to stop even after being pinned for 5 seconds.
+
+  ## Controller Robustness
+
+  ## Discussion
+  I really enjoyed implementing PID control on my robot especially because I am also taking the feedback control class this semester. Therefore, this lab gave me a valuable opportunity to see the theory I had learned in that class applied to a real robotic system. 
+
+  
+
+
+
+  
+
 
 
 
