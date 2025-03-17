@@ -107,7 +107,7 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   ![image](https://github.com/user-attachments/assets/79924165-cc4b-4f0c-9800-c3a1346cdbe6)
 
-  This lead to much smoother distance curve and control inputs into my car as shown below. 
+  This lead to much smoother distance curve and control inputs into my car as shown below. It will also help compensate for any derivative kick the controller might feel.
 
   ![filtered_pid_distance](https://github.com/user-attachments/assets/52cc8aff-4dfe-4dba-b367-82b20ce522af)
 
