@@ -13,6 +13,9 @@ We can verify this sampling rate by running code very similar to that in lab 3 w
 
 After sending the accociated measurements and time stamps over bluetooth, I found that I was able to achieve a sampling rate of 45hz which was close to theoretical sampling rate of 50hz on the datasheet. 
 
+![image](https://github.com/user-attachments/assets/4f8736a4-761a-46f5-88a8-9add37227abb)
+
+
 ## P Controller
 With the TOF sensor properly configured, I began implementing a simple p controller using the function shown below. To calculate a good starting point for kp, I knew that the max range I was recieving from my distance sensor was about 2000mm. I wanted this to correspond to a motor command signal of 1 which indicates that the max value of kp should be around 0.0005. However, this caused significant overshoot and I had to reduce kp to 0.00009 to prevent the car from hitting the wall when trying to stop at a set point 1ft from the wall.
 
