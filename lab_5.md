@@ -53,7 +53,7 @@ Here is the accociated video.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/1jN3yShu2qo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 # PID Controller
-One of the most distinct features of the P controller is the large overshoot. This could cause crashes at higher speeds. To compensate for this, I added a derivative term which will act as a damper to reduce that overshoot. This term corresponds to the velocity of the robot estimated from successive distance measurements multiplied by a weighting factor kd. I also added a very small integral term to remove any small steady state errors in my controller. This term estimates the integral of the errror by adding each new error to a Riemann sum and multiplying it by a weighting factor ki. 
+One of the most distinct features of the P controller is the large overshoot. This could cause crashes at higher speeds. To compensate for this, I added a derivative term which will act as a damper to reduce that overshoot. This term corresponds to the velocity of the robot estimated from successive distance measurements multiplied by a weighting factor kd. Note that computing the derivative in this way prevents "derivative kick" which would happen if the derivative was computed directly on the error. I also added a very small integral term to remove any small steady state errors in my controller. This term estimates the integral of the errror by adding each new error to a Riemann sum and multiplying it by a weighting factor ki. 
 
 ![pid_control_function](https://github.com/user-attachments/assets/4a1628bf-3bd6-49c4-97bb-6ad15453426f)
 
@@ -107,8 +107,8 @@ One of the most distinct features of the P controller is the large overshoot. Th
 
   ![image](https://github.com/user-attachments/assets/79924165-cc4b-4f0c-9800-c3a1346cdbe6)
 
-  This lead to much smoother distance curve and control inputs into my car as shown below. It will also help compensate for any derivative kick the controller might feel.
-
+  This lead to much smoother distance curve and control inputs into my car as shown below.
+  
   ![filtered_pid_distance](https://github.com/user-attachments/assets/52cc8aff-4dfe-4dba-b367-82b20ce522af)
 
   ![filtered_pid_control_signal](https://github.com/user-attachments/assets/77db2efc-f983-4de3-a6d4-4ac7c02841bf)
