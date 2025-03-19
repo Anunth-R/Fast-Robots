@@ -55,7 +55,7 @@ After some experimentation, I found that kp = 0.03, ki = 0.006, and kd = 0.08 ha
 
 I also added functionality so that I could dynamically change the setpoint of the orientation controller. The nature of my PID controller function made this easy to do as I simply had to add an extra command to allow this. In addition, my flag based implementation of my software makes it easy overall to enable/ disable different controllers and sensors which will hopefully make development easier in the future.
 
-![image](https://github.com/user-attachments/assets/0188bcf2-913c-4574-89ad-62ffa5a97c90)
+![image](https://github.com/user-attachments/assets/998b91c9-aa97-4f4c-871e-1d60c685b5aa)
 
 # Windup Protection
 
