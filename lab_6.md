@@ -67,7 +67,7 @@ Another thing to think about is how to correct orientation while the car is movi
 
 # Windup Protection
 
-I implemented windup protection in a very similar manner to the previous lab. I did not observe any horrible behavior from my orientation controller due to windup but it is still important to have just in case the car gets stuck somewhere.
+I implemented windup protection in a very similar manner to the previous lab. I did not observe any horrible behavior from my orientation controller due to windup but it is still important to have just in case the car gets stuck somewhere. Without windup protection, the integral term could saturate the actuators and cause the car to spin out of control. By constraining the integrator error, we can prevent this.
 
 ![image](https://github.com/user-attachments/assets/670732a3-d97e-4be9-ba85-d6b166c3568e)
 
