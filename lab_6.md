@@ -57,7 +57,18 @@ I also added functionality so that I could dynamically change the setpoint of th
 
 ![image](https://github.com/user-attachments/assets/998b91c9-aa97-4f4c-871e-1d60c685b5aa)
 
+Another thing to think about is how to correct orientation while the car is moving forward. I think it might be possible to layer some differential power calculated by the the orientation controller onto to the standard linear PID controller keep the orientation constant while the car is moving forward or backward. 
+
 # Windup Protection
+
+I implemented windup protection in a very similar manner to the previous lab. I did not observe any horrible behavior from my orientation controller due to windup but it is still important to have just in case the car gets stuck somewhere.
+
+![image](https://github.com/user-attachments/assets/670732a3-d97e-4be9-ba85-d6b166c3568e)
+
+# Conclusion
+
+Overall, I am very happy with the preformance of my orientation controller. I think that the DMP really helped enhance the utility of my orientation controller and I look forward to using it in the future.
+
 
 
 
