@@ -15,7 +15,7 @@ One thing that I noticed in the previous labs was that the yaw angle has substan
 
 ![image](https://github.com/user-attachments/assets/8c299303-5281-443f-950d-76a64afa2f1b)
 
-One important thing to note is that INV_ICM20948_SENSOR_GAME_ROTATION_VECTOR sets the maximum sampling rate of the IMU to 1.1kHz and the maximum detectable rotational speed to 2000 degrees per second. Both of these should be more than enough for the dynamics profile of this car. We can change the sample rate but the current one seems more than adaquate. 
+One important thing to note is that INV_ICM20948_SENSOR_GAME_ROTATION_VECTOR sets the maximum sampling rate of the IMU to 1.1kHz and the maximum detectable rotational speed to 2000 degrees per second. Both of these should be more than enough for the dynamics profile of this car. In practice, I was able to sample the sensor at 384hz. This is around how fast the Artemis loop runs on its own. We can change the sample rate of the IMU but the current one seems more than adaquate. 
 
 The DMP outputs sensor measuments as a quaternion. Therefore, both polling the IMU and computing the yaw euler angle ([-180,180]) from the quaternion is handled by the IMU_DMP_YAW function shown below. Note that this code was heavily inspired by Example7_DMP_Quat6_EulerAngles.ino in the examples folder. 
 
