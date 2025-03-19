@@ -53,6 +53,10 @@ After some experimentation, I found that kp = 0.03, ki = 0.006, and kd = 0.08 ha
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/kDg8-Fvx0Cg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+Here is an example of me trying to disturb my controller after it has reached an angle setpoint.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b9SBJ4yOQyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # Improvements for the Future
 
 I also added functionality so that I could dynamically change the setpoint of the orientation controller. The nature of my PID controller function made this easy to do as I simply had to add an extra command to allow this. In addition, my flag based implementation of my software makes it easy overall to enable/ disable different controllers and sensors which will hopefully make development easier in the future.
