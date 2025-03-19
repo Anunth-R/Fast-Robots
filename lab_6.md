@@ -11,7 +11,7 @@ Most of the infrastructure for this lab had already been implemented in the prev
 
 # DMP Setup
 
-One thing that I noticed in the previous labs was that the yaw angle has substantial drift on the IMU. I found that I could correct this using the digital motion processor (DMP) built into the IMU but disabled by default. The DMP does this by fusing the accelerometer, gyroscope, and magnetometer data so that a single quaternion can be constructed that encodes the orientation of the robot. After reading through the documentaition and enabling the DMP, I added the following code to my setup to initialize DMP. 
+One thing that I noticed in the previous labs was that the yaw angle has substantial drift on the IMU. I found that I could correct this using the digital motion processor (DMP) built into the IMU but disabled by default. The DMP does this by fusing the accelerometer, gyroscope, and magnetometer data so that a single quaternion can be constructed that encodes the orientation of the robot. After reading through the documentation and enabling the DMP, I added the following code to my setup to initialize DMP. 
 
 ![image](https://github.com/user-attachments/assets/8c299303-5281-443f-950d-76a64afa2f1b)
 
@@ -23,8 +23,52 @@ The DMP outputs sensor measuments as a quaternion. Therefore, both polling the I
 
 # Orientation PID Control
 
-The code for my orientation pid controller is shown below and very  similar to the code used for the linear PID controller in the previous lab.
+The code for my orientation pid controller is shown below and very similar to the code used for the linear PID controller in the previous lab.
+
 ![image](https://github.com/user-attachments/assets/187f7e12-2b88-40d5-bd4b-3a696e4b1020)
+
+Note that I added the following logic to prevent the transition from -180 to 180 degrees from causing spikes and instability in my controller.
+
+![image](https://github.com/user-attachments/assets/176fbf3b-3ccc-4765-ba68-d43f307b85b4)
+
+One thing to note is that similar to the previous lab, I took the derivative of the sensor measurement rather than the error itself. This prevents derivative kick in my controller. In addition, although the IMU outputs raw rotation rates, the DMP only gives angle measurements so I was forced to descretely differentiate those measurements. To ensure that the transition from -180 degrees to 180 degrees does not cause a massive spike in velocity, I added similar logic to that used on the error term.
+
+![image](https://github.com/user-attachments/assets/751f2a73-e214-4fc6-a41c-dc9e0e558416)
+
+Finally, just like the linear controller, I have a low pass filter to remove noise from my derivative term. 
+
+![image](https://github.com/user-attachments/assets/dfab47d6-fb8a-4878-9bc9-ff95a85aed51)
+
+With IMU_DMP_YAW and pid_O_controller implemented, I integrated these functions into my main control loop as shown below.
+
+![image](https://github.com/user-attachments/assets/c0aadf2f-11bf-42e6-bb35-62eeadc37201)
+
+# Testing the Controller
+
+After some experimentation, I found that kp = 0.03, ki = 0.006, and kd = 0.08 had nice preformance. Below are plots and video of commanding my car to move from around -90 degrees to 30 degrees. As shown by the plots and video, the car can quickly change orientation to a new setpoint with an error threshold of less that 0.3 degrees.
+
+![orientation](https://github.com/user-attachments/assets/2328423d-595f-4174-9cff-9a232ebf9661)
+
+![control_sig](https://github.com/user-attachments/assets/fd840186-342b-41d1-89ed-c05fe49dc9dd)
+
+# Improvements for the Future
+
+I also added functionality so that I could dynamically change the setpoint of the orientation controller. The nature of my PID controller function made this easy to do as I simply had to add an extra command to allow this. In addition, my flag based implementation of my software makes it easy overall to enable/ disable different controllers and sensors which will hopefully make development easier in the future.
+
+![image](https://github.com/user-attachments/assets/0188bcf2-913c-4574-89ad-62ffa5a97c90)
+
+# Windup Protection
+
+
+
+
+
+
+
+
+
+
+
 
 
 
