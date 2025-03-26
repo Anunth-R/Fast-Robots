@@ -9,6 +9,8 @@ In order to implement a Kalman filter, we need a linear state space model of our
 
 ![image](https://github.com/user-attachments/assets/24767a8c-6711-4883-b609-526806012907)
 
+<img src="https://github.com/user-attachments/assets/24767a8c-6711-4883-b609-526806012907" width="150">
+
 ![image](https://github.com/user-attachments/assets/ce9c777a-a868-432e-a6c6-d184067d22e5)
 
 
