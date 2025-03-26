@@ -41,7 +41,7 @@ Next we need to select values for our matrices Q (2x2) and R (1x1) which define 
 
 ![image](https://github.com/user-attachments/assets/028a3de0-0979-4e24-9792-92d79a20fd45)
 
-However, after some tuning, I found that a varience of 20mm seemed to produce better results. For sig_3, I noticed during the labs that the TOF sensor had an uncertainty of around 45mm. Therefore, I selected this value for R.
+However, after some tuning, I found that a varience of 20mm seemed to produce better results. For R, I noticed during the previous labs that the TOF sensor had an uncertainty of around 45mm. Therefore, I selected this value for R.
 
 ![image](https://github.com/user-attachments/assets/dfa6062a-51af-49eb-bffb-6636ff91c11a)
 
