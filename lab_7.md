@@ -92,11 +92,13 @@ Then, we can integrate our Kalman filter into the main loop. Note that the Kalma
 
 ![image](https://github.com/user-attachments/assets/be3f360a-8e83-4ab2-b789-c5c6b7a3c735)
 
-After testing the robot with the Kalman filter, we can obtain the following plots.
+After testing the robot with the Kalman filter, we can obtain the following plots and video.
 
 ![KFE_on_robot](https://github.com/user-attachments/assets/4b4b835f-d931-40db-a099-6452f8f22246)
 
 ![KFE_on_robot_zoomed](https://github.com/user-attachments/assets/17dc9087-57af-4c59-bc60-92c8d33d5afe)
+
+
 
 Note that not only does the filter nicely align with the sensor measurements, it is much more smooth than the distance extrapolator used previously highlighting the advantage of using the Kalman filter. 
 
