@@ -21,7 +21,7 @@ Using this data, we can compute the velocity of the car and extract the steady s
 
 Using these parameters, we can estimate m and d using the equations shown below. We can now have a complete linear state space model of our car.
 
-<img src="https://github.com/user-attachments/assets/b252ab59-3ca8-48fc-863e-809c653ab427" width="300">
+<img src="https://github.com/user-attachments/assets/b252ab59-3ca8-48fc-863e-809c653ab427" width="400">
 
 # Initializing the Kalman Filter
 
