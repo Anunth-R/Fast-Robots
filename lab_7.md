@@ -53,7 +53,7 @@ With the Kalman filter implemented, we can load in raw data collected from lab 5
 
 ![image](https://github.com/user-attachments/assets/91100cb2-fc45-4b0c-b5b5-d3919e47bbb4)
 
-Here is a plot of the results. As you can see, the Kalman Filter does an exellent job of smoothly tracking the position of the car without trying to chase indevidual sensor values.
+Here is a plot of the results. As you can see, the Kalman Filter does an exellent job of smoothly tracking the position of the car without trying to chase individual sensor values.
 
 ![KFE](https://github.com/user-attachments/assets/6c8c0bfb-692d-4ef6-b969-8da8fd9734b4)
 
