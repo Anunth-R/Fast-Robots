@@ -9,7 +9,6 @@ In order to implement a Kalman filter, we need a linear state space model of our
 
 <img src="https://github.com/user-attachments/assets/fea87d18-ba57-4eb6-94c3-93ff7f890dbe" width="200">
 
-
 This model requires knowledge of the drag force (d) and car mass (m). We can determine these quantities by analyzing our car's response to a step control input. The plot below depicts the car's TOF sensor measurements to a control input of 0.4. this control input was selected as it is in the median range of control inputs supplied to the car and therefore will produce data in the region we most care about. As shown by the plot, the car reaches very close to its steady state velocity by the end of the data collection period. (and then slammed into a pillow thankfully)
 
 ![image](https://github.com/user-attachments/assets/5d917f70-9b06-4775-8a35-2fac29a846dc)
@@ -22,7 +21,7 @@ Using this data, we can compute the velocity of the car and extract the steady s
 
 Using these parameters, we can estimate m and d using the equations shown below. We can now have a complete linear state space model of our car.
 
-![image](https://github.com/user-attachments/assets/b252ab59-3ca8-48fc-863e-809c653ab427)
+<img src="https://github.com/user-attachments/assets/b252ab59-3ca8-48fc-863e-809c653ab427" width="200">
 
 # Initializing the Kalman Filter
 
