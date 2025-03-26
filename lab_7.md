@@ -62,7 +62,39 @@ Here is a plot of the results. As you can see, the Kalman Filter does an exellen
 
 # Verifying the Integrity of the Kalman Filter
 
-Argueably more important than just the Kalman FIlter's state estimate is its covariance estimate. 
+Argueably more important than just the Kalman FIlter's state estimate is its covariance estimate. A good indication that our filter is working properly is that the true position of the car remains within two standard deviations (95% confidence interval) of the true position of the car. Unfortunately, we do not know the true position of the car but we can use the sensor readings as an approximate estimate. As shown by the plots above, the sensor values are contained within the Kalman filter's 2 sigma estimate bounds (the shaded region) so the filter is likely functioning properly.
+
+# Kalman Filter on the Robot (and optional task)
+
+With, the Kalman filter working properly in simulation, we can now implement it on our car. First, we can define a Kalman Filter function now using Arduino/C syntax. We can set update to either true or false depending on whether sensor data is available.
+
+![image](https://github.com/user-attachments/assets/8c0fe549-0857-4283-9372-542804da9e89)
+
+With the Kalman filter implemented, we can now initialize our Kalman filter perameters to the same as those used in simulation. In retrospect I should have modified dt to be the actual loop rate of the Arduino but the filter worked well nonetheless. 
+
+![image](https://github.com/user-attachments/assets/829cdc1d-accb-4a22-a539-0bd715b90857)
+
+Then, we can integrate our Kalman filter into the main loop. Note that the Kalman filter is running whether or not sensor data is available also completing the optional task as well. One thing to note is that I made sure that the Kalman filter only ran after the second sensor measurement to ensure that the filter could properly be initialzied using the first sensor measurement.
+
+![image](https://github.com/user-attachments/assets/be3f360a-8e83-4ab2-b789-c5c6b7a3c735)
+
+After testing the robot with the Kalman filter, we can obtain the following plots.
+
+![KFE_on_robot](https://github.com/user-attachments/assets/4b4b835f-d931-40db-a099-6452f8f22246)
+
+![KFE_on_robot_zoomed](https://github.com/user-attachments/assets/17dc9087-57af-4c59-bc60-92c8d33d5afe)
+
+Note that not only does the filter nicely align with the sensor measurements, it is much more smooth than the distance extrapolator used previously highlighting the advantage of using the Kalman filter. 
+
+
+
+
+
+
+
+
+
+
 
 
 
