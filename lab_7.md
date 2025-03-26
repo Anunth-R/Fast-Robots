@@ -98,7 +98,7 @@ After testing the robot with the Kalman filter, we can obtain the following plot
 
 ![KFE_on_robot_zoomed](https://github.com/user-attachments/assets/17dc9087-57af-4c59-bc60-92c8d33d5afe)
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/64BjdOqDLk0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Note that not only does the filter nicely align with the sensor measurements, it is much more smooth than the distance extrapolator used previously highlighting the advantage of using the Kalman filter. 
 
