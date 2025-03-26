@@ -25,7 +25,7 @@ Using these parameters, we can estimate m and d using the equations shown below.
 
 # Initializing the Kalman Filter
 
-We will define A,B,C to be the following matrices.
+We will define A,B,C to be the following matrices. (C simply pulls the position from the state as that is what our sensor measures)
 
 <img src="https://github.com/user-attachments/assets/f76a9d10-7444-4963-8ef3-3ff783bbfce2" width="250">
 
