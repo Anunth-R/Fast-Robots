@@ -31,9 +31,8 @@ Using these parameters, we can estimate m and d using the equations shown below.
 
 We will define A,B,C to be the following matrices.
 
-[A]
-[B]
-[C]
+![image](https://github.com/user-attachments/assets/f76a9d10-7444-4963-8ef3-3ff783bbfce2)
+
 
 To implement a Kalman filter, we must first descritize our system. I used dt = 0.02s as that is the rate at which sensor data was collected. 
 
