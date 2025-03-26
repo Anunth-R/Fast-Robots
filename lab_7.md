@@ -66,6 +66,18 @@ Here is a plot of the results. As you can see, the Kalman Filter does an exellen
 
 Argueably more important than just the Kalman FIlter's state estimate is its covariance estimate. A good indication that our filter is working properly is that the true position of the car remains within two standard deviations (95% confidence interval) of the true position of the car. Unfortunately, we do not know the true position of the car but we can use the sensor readings as an approximate estimate. As shown by the plots above, the sensor values are contained within the Kalman filter's 2 sigma estimate bounds (the shaded region) so the filter is likely functioning properly.
 
+# Effects of Kalman Filter Parameters
+
+Q and R play a key role in the preformance of our filter. As mentioned before, Q represents the process noise. If we have a lot of process noise, the Kalman filter will not trust our dynamic model and simply chase our sensor values.
+
+![image](https://github.com/user-attachments/assets/1236cc5c-25a4-4716-ab18-8a81e5ea8d44)
+
+R represents the sensor noise. If we have a lot of sensor noise, the Kalman filter will trust the model more and deviate from the sensor values.
+
+![image](https://github.com/user-attachments/assets/8fc87791-af25-4988-8d3e-c318f0c6b611)
+
+Finally, it is important to have a good initial guess for the robot's state and covarience. The Kalman Filter should still converge to a proper state estimate and covarience even if these parameters are off. However, it might struggle a lot in the beginning if these parameters are wildly off.
+
 # Kalman Filter on the Robot (and optional task)
 
 With, the Kalman filter working properly in simulation, we can now implement it on our car. First, we can define a Kalman Filter function now using Arduino/C syntax. We can set update to either true or false depending on whether sensor data is available.
