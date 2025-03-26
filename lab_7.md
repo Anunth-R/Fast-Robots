@@ -35,7 +35,7 @@ To implement a Kalman filter, we must first descritize our system. I used dt = 0
 
 Next we need to select values for our matrices Q (2x2) and R (1x1) which define the process and sensor noise in our system. We will assume that our variables are uncorrelated which means that we need a varience estimate for the position and velocity of the car as well as the TOF sensor readings. We can get ballpark values for the velocity and positions using the following equations. 
 
-<img src="https://github.com/user-attachments/assets/028a3de0-0979-4e24-9792-92d79a20fd45" width="250">
+<img src="https://github.com/user-attachments/assets/028a3de0-0979-4e24-9792-92d79a20fd45" width="350">
 
 However, after some tuning, I found that a varience of 20mm seemed to produce better results. For R, I noticed during the previous labs that the TOF sensor had an uncertainty of around 45mm. Therefore, I selected this value for R.
 
