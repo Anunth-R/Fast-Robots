@@ -88,6 +88,9 @@ Note that not only does the filter nicely align with the sensor measurements, it
 
  ![extrapolated_measured_distance](https://github.com/user-attachments/assets/1a06ada3-7bad-448a-8017-84f29d50fb18)
 
+# Conclusion
+
+Despite just being a few more lines of code, the Kalman filter is a power tool which allows a robot to really get the most out of its sensors. I am very glad I had the oppertunity to implement it on a real robotic system and witness the preformance benifits it brought.
  
 
 
