@@ -13,6 +13,8 @@ This model requires knowledge of the drag force (d) and car mass (m). We can det
 
 ![image](https://github.com/user-attachments/assets/5d917f70-9b06-4775-8a35-2fac29a846dc)
 
+![image](https://github.com/user-attachments/assets/ef4482c6-de86-482a-8648-f938d7fc1c01)
+
 Using this data, we can compute the velocity of the car and extract the steady state velocity (vss) and rise time (t_r) corresponding to 90% of the steady state velocity. vss was found to be approximately 2.4 m/s and t_r was 1.27s.  
 
 ![image](https://github.com/user-attachments/assets/2cc52e81-1949-4f6e-b4a3-bf16d2ca2538)
