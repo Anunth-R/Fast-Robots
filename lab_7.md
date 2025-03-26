@@ -5,11 +5,72 @@ title: Lab 7
 
 # Estimate Drag and Mass
 
-In order to implement a Kalman filter, we need a linear state space model of our system. Our robot can be treated as a simple second order system with both a linear drag and motor force acting on it. If we construct the robot's state out of its position and velocity, we can model our robot using the state space system shown below.
+In order to implement a Kalman filter, we need a linear state space model of our system. Our robot can be treated as a simple second order system with both a linear drag and motor force acting on it. If we construct the robot's state out of its position and velocity, we can model our robot using the state space system shown below. y corresponds to the sensor output of our TOF sensor.
 
 [insert state space model]
 
-This model requires knowledge of the drag force (d) and car mass (m). We can determine these quantities by analyzing our car's response to a step control input. The plot below depicts the car's TOF sensor measurements to a control input of 0.4.
+This model requires knowledge of the drag force (d) and car mass (m). We can determine these quantities by analyzing our car's response to a step control input. The plot below depicts the car's TOF sensor measurements to a control input of 0.4. 0.4 was selected as it is in the median range of control inputs supplied to the car and therefore will produce data in the region we most care about. As shown by the plot, the car reaches very close to its steady state velocity by the end of the data collection period. (and then slammed into a pillow thankfully)
+
+![image](https://github.com/user-attachments/assets/5d917f70-9b06-4775-8a35-2fac29a846dc)
+
+Using this data, we can compute the velocity of the car and extract the steady state velocity (vss) and rise time (t_r) corresponding to 90% of the steady state velocity. vss was found to be approximately 2.4 m/s and t_r was 1.27s.  
+
+![image](https://github.com/user-attachments/assets/2cc52e81-1949-4f6e-b4a3-bf16d2ca2538)
+
+Using these parameters, we can estimate m and d using the equations shown below. We can now have a complete linear state space model of our car.
+
+[insert d equation]
+[insert m equation]
+
+# Initializing the Kalman Filter
+
+We will define A,B,C to be the following matrices.
+
+[A]
+[B]
+[C]
+
+To implement a Kalman filter, we must first descritize our system. I used dt = 0.02s as that is the rate at which sensor data was collected. 
+
+![image](https://github.com/user-attachments/assets/db6f46f6-d9b8-42c5-838f-18169abca68a)
+
+Next we need to select values for our matrices Q (2x2) and R (1x1) which define the process and sensor noise in our system. We will assume that our variables are uncorrelated which means that we need a varience estimate for the position and velocity of the car as well as the TOF sensor readings. We can get ballpark values for the velocity and positions using the following equations. 
+
+[sig_1,sig_2]
+
+However, after some tuning, I found that a varience of 20mm seemed to produce better results. For sig_3, I noticed during the labs that the TOF sensoe had an uncertainty of around 45mm. Therefore, I selected this value for R.
+
+![image](https://github.com/user-attachments/assets/dfa6062a-51af-49eb-bffb-6636ff91c11a)
+
+The Kalman filter also requires an initial guess as to the state of our robot and an accociated covarience estimate. I set the initial state to the first sensor measurement and initial covariance with 20 and 40 along the diagonal as these seemed like a reasonable initial guess. Over time, the Kalman filter should converge to the true value.
+
+![image](https://github.com/user-attachments/assets/4df7fe81-0809-4883-824e-994436196789)
+
+Finally, we can implement the main Kalman Filter function which takes in all of the nessesary perameters and preforms the predict and update steps.
+
+![image](https://github.com/user-attachments/assets/4214bb7c-d16e-407d-a043-3523803fcd8a)
+
+With the Kalman filter implemented, we can load in raw data collected from lab 5 of the car using its PID controller to stop before hitting a wall. We can then loop through that data and use the Kalman filter to estimate the position of the car.
+
+![image](https://github.com/user-attachments/assets/91100cb2-fc45-4b0c-b5b5-d3919e47bbb4)
+
+Here is a plot of the results. As you can see, the Kalman Filter does an exellent job of smoothly tracking the position of the car without trying to chase indevidual sensor values.
+
+![KFE](https://github.com/user-attachments/assets/6c8c0bfb-692d-4ef6-b969-8da8fd9734b4)
+
+![KFE_zoomed](https://github.com/user-attachments/assets/083cf092-14a3-45d4-ac31-49ce6f15f84f)
+
+# Verifying the Integrity of the Kalman Filter
+
+Argueably more important than just the Kalman FIlter's state estimate is its covariance estimate. 
+
+
+
+
+
+
+
+
 
 
 
