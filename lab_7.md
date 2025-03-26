@@ -86,6 +86,10 @@ After testing the robot with the Kalman filter, we can obtain the following plot
 
 Note that not only does the filter nicely align with the sensor measurements, it is much more smooth than the distance extrapolator used previously highlighting the advantage of using the Kalman filter. 
 
+ ![extrapolated_measured_distance](https://github.com/user-attachments/assets/1a06ada3-7bad-448a-8017-84f29d50fb18)
+
+ 
+
 
 
 
