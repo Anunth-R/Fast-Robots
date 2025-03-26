@@ -7,11 +7,7 @@ title: Lab 7
 
 In order to implement a Kalman filter, we need a linear state space model of our system. Our robot can be treated as a simple second order system with both a linear drag and motor force acting on it. If we construct the robot's state out of its position and velocity, we can model our robot using the state space system shown below. y corresponds to the sensor output of our TOF sensor.
 
-![image](https://github.com/user-attachments/assets/24767a8c-6711-4883-b609-526806012907)
-
 <img src="https://github.com/user-attachments/assets/24767a8c-6711-4883-b609-526806012907" width="200">
-
-![image](https://github.com/user-attachments/assets/ce9c777a-a868-432e-a6c6-d184067d22e5)
 
 <img src="https://github.com/user-attachments/assets/ce9c777a-a868-432e-a6c6-d184067d22e5" width="200">
 
