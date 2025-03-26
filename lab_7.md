@@ -85,7 +85,7 @@ With the Kalman filter implemented, we can now initialize our Kalman filter pera
 
 ![image](https://github.com/user-attachments/assets/829cdc1d-accb-4a22-a539-0bd715b90857)
 
-Then, we can integrate our Kalman filter into the main loop. Note that the Kalman filter is running whether or not sensor data is available also completing the optional task as well. One thing to note is that I made sure that the Kalman filter only ran after the second sensor measurement to ensure that the filter could properly be initialzied using the first sensor measurement.
+Then, we can integrate our Kalman filter into the main loop. Note that the Kalman filter is running whether or not sensor data is available also completing the optional task as well. One thing to note is that I made sure that the Kalman filter only ran after the second sensor measurement to ensure that the filter could properly be initialized using the first sensor measurement.
 
 ![image](https://github.com/user-attachments/assets/be3f360a-8e83-4ab2-b789-c5c6b7a3c735)
 
