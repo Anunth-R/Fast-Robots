@@ -41,7 +41,7 @@ However, after some tuning, I found that a varience of 20mm seemed to produce be
 
 ![image](https://github.com/user-attachments/assets/dfa6062a-51af-49eb-bffb-6636ff91c11a)
 
-The Kalman filter also requires an initial guess as to the state of our robot and an accociated covarience estimate. I set the initial state to the first sensor measurement and initial covariance with 20 and 40 along the diagonal as these seemed like a reasonable initial guess. Over time, the Kalman filter should converge to the true value.
+The Kalman filter also requires an initial guess as to the state of our robot and an accociated covarience estimate. I set the initial state to the first sensor measurement and initial covariance with 20 and 40 along the diagonal as this seemed like a reasonable initial guess. Over time, the Kalman filter should converge to the true value.
 
 ![image](https://github.com/user-attachments/assets/4df7fe81-0809-4883-824e-994436196789)
 
@@ -67,11 +67,11 @@ Argueably more important than just the Kalman FIlter's state estimate is its cov
 
 Q and R play a key role in the preformance of our filter. As mentioned before, Q represents the process noise. If we have a lot of process noise, the Kalman filter will not trust our dynamic model and simply chase our sensor values.
 
-![image](https://github.com/user-attachments/assets/1236cc5c-25a4-4716-ab18-8a81e5ea8d44)
+![image](https://github.com/user-attachments/assets/524fd268-4e5c-4a47-91c7-b8f8308b8de3)
 
 R represents the sensor noise. If we have a lot of sensor noise, the Kalman filter will trust the model more and deviate from the sensor values.
 
-![image](https://github.com/user-attachments/assets/8fc87791-af25-4988-8d3e-c318f0c6b611)
+![image](https://github.com/user-attachments/assets/b44af86f-49e3-462f-9f1d-92c0557ad5dc)
 
 Finally, it is important to have a good initial guess for the robot's state and covarience. The Kalman Filter should still converge to a proper state estimate and covarience even if these parameters are off. However, it might struggle a lot in the beginning if these parameters are wildly off.
 
