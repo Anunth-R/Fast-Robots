@@ -28,12 +28,12 @@ Therefore, I created a state variable called mode which will allow the car to ke
 # Drift Controller
 I then created a function called drift controller which handles each portion of the stunt.
 
-![image](https://github.com/user-attachments/assets/01f40927-afca-41b4-955f-dd5f594a3a5a)
+![image](https://github.com/user-attachments/assets/05239efc-0ff3-4eb0-878f-e4ef15663f04)
 
 ## Approach
 The approach step is handled by the following code snippet which essentially drives the car forward until the car is within 1214mm of the wall. Note that this is larger that the actual 914mm in the requirements because my TOF sensor is angled slightly upward and would therefore measure a longer distance than the actual distance to the wall.
 
-![image](https://github.com/user-attachments/assets/ef286098-b5d1-496b-8e11-bee754c2d264)
+![image](https://github.com/user-attachments/assets/4be40fe2-bc65-4eac-8771-b88b3d0fef1b)
 
 ## Drift
 Then, once the car is close enough to the wall, we can initiate a 180 degree turn using the orientation controller implemented previously. Note, I added return statements to the orientation controller so that it would return 1 once the error is within the threshold and zero if it is not.
