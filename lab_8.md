@@ -49,6 +49,16 @@ The final part of the controller drives the car forward at full power for o.5s. 
 
 ![image](https://github.com/user-attachments/assets/9cebac4c-399f-427e-bf0f-d2cf41f4d61d)
 
+## Main Loop
+Here is the controller implemented in the main loop of the code very similar to how the previous controllers were implemented.
+
+![image](https://github.com/user-attachments/assets/76b7cb4a-07e4-4cac-bc8c-a48a3af327c4)
+
+# Plots and Video
+
+
+
+
 
 
 
