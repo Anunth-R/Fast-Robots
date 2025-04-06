@@ -55,7 +55,7 @@ Here is the controller implemented in the main loop of the code very similar to 
 ![image](https://github.com/user-attachments/assets/76b7cb4a-07e4-4cac-bc8c-a48a3af327c4)
 
 # Plots and Video
-Here are plots and video of the the car drifting. As shown by the distance plot, the car approaches the wall and then spins around. As the car spins, the distance sensor becomes very noisy and large as it is now measuring an open room with no wall. Another interesting thing to note is that the orientation controller saturates a lot during the drift leading to uneeded oscillations. Therefore, it could have probably been tuned better to reduce these ocillations and the time it takes to complete the manuever.
+Here are plots and video of the the car drifting. As shown by the distance plot, the car approaches the wall and then spins around. As the car spins, the distance sensor becomes very noisy and large as it is now measuring an open room with no wall. Another interesting thing to note is that the orientation controller saturates a lot during the drift leading to excess oscillations. Therefore, it could have probably been tuned better to reduce these ocillations and the time it takes to complete the manuever.
 
 ![image](https://github.com/user-attachments/assets/8d0af167-9bb4-4d59-a754-3c0596e4b338)
 
