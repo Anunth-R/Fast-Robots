@@ -45,7 +45,7 @@ I also created a helper function compute_oposite which computes the reference an
 ![image](https://github.com/user-attachments/assets/2fcbceae-80c4-43dc-8a50-fe97227b90aa)
 
 ## Return
-The final part of the controller drives the car forward at full power for o.5s. This allows the car to return to the start line.
+The final part of the controller drives the car forward at full power for 0.5s. This allows the car to return to the start line.
 
 ![image](https://github.com/user-attachments/assets/9cebac4c-399f-427e-bf0f-d2cf41f4d61d)
 
@@ -70,7 +70,15 @@ Here is the accociated video of the stunt.
 # Additional Trials
 Here are additional trials of the car preforming the stunt.
 
+![image](https://github.com/user-attachments/assets/ccb71559-a7c1-4229-b5a2-7783c36f566a)
+
+![image](https://github.com/user-attachments/assets/22d54421-91e4-4ac8-83fa-a0d6bb6c0184)
+
+![image](https://github.com/user-attachments/assets/77b56c31-1597-431e-87a0-5480c6f59bb4)
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/24-HuC-nnlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VllUHcfnMNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
