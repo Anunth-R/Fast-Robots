@@ -38,7 +38,7 @@ The approach step is handled by the following code snippet which essentially dri
 ## Drift
 Then, once the car is close enough to the wall, we can initiate a 180 degree turn using the orientation controller implemented previously. Note, I added return statements to the orientation controller so that it would return 1 once the error is within the threshold and zero if it is not.
 
-![image](https://github.com/user-attachments/assets/db0acf92-5c80-45c0-9560-a37132aa6b97)
+![image](https://github.com/user-attachments/assets/8353c3ab-c32b-4d00-984b-f10405e2b5fc)
 
 I also created a helper function compute_oposite which computes the reference angle 180 degrees from the current orientation.
 
