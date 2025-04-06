@@ -74,6 +74,10 @@ Here are additional trials of the car preforming the stunt.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VllUHcfnMNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+# Conclusion
+
+Overall, I had a lot of fun during this lab. I really got to put together the pieces from pervious labs to create something cool!
+
 
 
 
