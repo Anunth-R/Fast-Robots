@@ -74,7 +74,7 @@ Here are additional trials of the car preforming the stunt.
 
 ![image](https://github.com/user-attachments/assets/22d54421-91e4-4ac8-83fa-a0d6bb6c0184)
 
-![image](https://github.com/user-attachments/assets/77b56c31-1597-431e-87a0-5480c6f59bb4)
+![image](https://github.com/user-attachments/assets/ba1deaaa-d51d-41c4-b778-7557a690d6ee)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/24-HuC-nnlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
