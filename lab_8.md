@@ -78,7 +78,11 @@ Here are additional trials of the car preforming the stunt.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/24-HuC-nnlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+![image](https://github.com/user-attachments/assets/2b6914e6-727b-47f7-b353-f7f7634247be)
 
+![image](https://github.com/user-attachments/assets/319a3522-8904-4db6-9a10-06a8cf968afe)
+
+![image](https://github.com/user-attachments/assets/f11a7cf3-09b0-45a5-af3e-edb1b535f495)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VllUHcfnMNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
