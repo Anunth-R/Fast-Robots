@@ -4,18 +4,62 @@ title: Lab 8
 ---
 
 # Prelab
-In prior labs, my batteries had been placed in the battery compartment of the car without anything securing them other than the wires that connected them. However, in this lab, the car will be preforming high speed stunts which means that every component must be properly sucured. Therefore, I added an extra rubber band to ensure that the batteries would not fall out of the car incase it crashed into a wall or flipped over.
+In prior labs, my batteries had been placed in the battery compartment of the car without anything securing them other than the wires that connected them. However, in this lab, the car will be preforming high speed stunts which means that every component must be properly secured. Therefore, I added an extra rubber band to ensure that the batteries would not fall out of the car incase it crashed into a wall or flipped over.
 
 ![PXL_20250406_185308668 MP](https://github.com/user-attachments/assets/d1f4abfb-dc8a-4eb4-911d-d0ffbc816701)
 
 The car is now ready to preform stunts!
 
-# Drifting
+# Drifting Steps
 The drift stunt consists of three different steps.
 
 * Approach: The car must quickly approach to 3ft from the wall.
 * Drift: A quick 180 degree turn to orient the car towards its start direction.
 * Return: The car returns as quickly as possible to the start line.
+
+Therefore, I created a state variable called mode which will allow the car to keep track of which step it is currently on in the stunt. 
+
+![image](https://github.com/user-attachments/assets/69ed1020-05b2-4c59-8350-382daab48243)
+
+* mode = 0: Approach
+* mode = 1: Drift
+* mode = 2: Return
+
+# Drift Controller
+I then created a function called drift controller which handles each portion of the stunt.
+
+![image](https://github.com/user-attachments/assets/44da9703-289a-4c67-9c71-809c8d0061d0)
+
+## Approach
+The approach step is handled by the following code snippet which essentially drives the car forward until the car is within 1214mm of the wall. Note that this is larger that the actual 914mm in the requirements because my TOF sensor is angled slightly upward and would therefore measure a longer distance than the actual distance to the wall.
+
+![image](https://github.com/user-attachments/assets/ef286098-b5d1-496b-8e11-bee754c2d264)
+
+## Drift
+Then, once the car is close enough to the wall, we can initiate a 180 degree turn using the orientation controller implemented previously. Note, I added return statements to the orientation controller so that it would return 1 once the error is within the threshold and zero if it is not.
+
+![image](https://github.com/user-attachments/assets/db0acf92-5c80-45c0-9560-a37132aa6b97)
+
+I also created a helper function compute_oposite which computes the reference angle 180 degrees from the current orientation.
+
+![image](https://github.com/user-attachments/assets/2fcbceae-80c4-43dc-8a50-fe97227b90aa)
+
+## Return
+The final part of the controller drives the car forward at full power for o.5s. This allows the car to return to the start line.
+
+![image](https://github.com/user-attachments/assets/9cebac4c-399f-427e-bf0f-d2cf41f4d61d)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
