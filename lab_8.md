@@ -65,6 +65,15 @@ Here are plots and video of the the car drifting. As shown by the distance plot,
 
 Here is the accociated video of the stunt.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HVamVbPlAvI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+# Additional Trials
+Here are additional trials of the car preforming the stunt.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/24-HuC-nnlw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VllUHcfnMNs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 
 
