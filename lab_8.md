@@ -28,7 +28,7 @@ Therefore, I created a state variable called mode which will allow the car to ke
 # Drift Controller
 I then created a function called drift controller which handles each portion of the stunt.
 
-![image](https://github.com/user-attachments/assets/44da9703-289a-4c67-9c71-809c8d0061d0)
+![image](https://github.com/user-attachments/assets/01f40927-afca-41b4-955f-dd5f594a3a5a)
 
 ## Approach
 The approach step is handled by the following code snippet which essentially drives the car forward until the car is within 1214mm of the wall. Note that this is larger that the actual 914mm in the requirements because my TOF sensor is angled slightly upward and would therefore measure a longer distance than the actual distance to the wall.
