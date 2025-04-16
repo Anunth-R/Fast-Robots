@@ -18,13 +18,30 @@ To map the environment, I selected using orientation control to spin my robot ar
 
 ![image](https://github.com/user-attachments/assets/716e1a6a-8a18-4cd5-a77e-10fee7caf757)
 
-3. Once our target has been computed, we call our spin controller which moves the robot to a desired orientation.
+3. Once our target has been computed, we call our scan_controller(float reading, float desire) which moves the robot to a desired orientation.
 
 ![image](https://github.com/user-attachments/assets/e58a7c89-b608-4b66-adf5-75e5e9686b87)
 
 4. If the get_meas flag is triggered, we take the measurement.
 
 ![image](https://github.com/user-attachments/assets/9ca0a6aa-d0c7-4a69-8375-8e014b1b03b8)
+
+Here is the implementation of the compute_next(target) helper function. It simply adds 20 degrees accounting for rap around. 
+
+![image](https://github.com/user-attachments/assets/6a002e6c-ec99-443b-a8ac-d28bf3d8277a)
+
+Finally, the scan_controller(float reading, float desire) simply wraps the previously implemented orientation controller but sets get_meas to true once the target has been reached.
+
+# Polar Plots
+
+After collecting raw data from the robot, I created some polar plots to verify that the robot was outputing reasonable data. The plots are shown below. These plots seem to largely match my expectations with smooth lines near close boundries and spikes where there are no obstacles.
+
+![image](https://github.com/user-attachments/assets/b0b7cbf3-a559-41ff-bb11-053b72035285)
+
+
+
+
+
 
 
 
