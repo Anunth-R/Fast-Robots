@@ -42,7 +42,7 @@ Here is a video of my robot preforming a scan. As shown below, the robot does a 
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mGzt2U54KEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-To further verify the quality of the controller, here is a plot depicting the delta theta between the angle at which each TOF measurement was recorded. As shown below, each delta theta is within the 2 deg margin of error.
+To further verify the quality of the controller, here is a plot depicting the delta theta between the angle at which each TOF measurement was recorded. As shown below, each delta theta is within the 2 deg margin of error. Based on the above, the robot should produce a reasonably accurate map as the deviations in the robot's position is small compared to the 4m x 4m room the robot is placed in. In addition, the DMP produces very accurate robot yaw estimates only increasing the accuracy of the map. The limiting factor is likely the TOF measurements especially at long distances as this has proven to be unreliable in previous labs.
 
 ![image](https://github.com/user-attachments/assets/7f43080b-74d4-4298-830e-18642e9d7e5a)
 
