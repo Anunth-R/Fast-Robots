@@ -46,6 +46,23 @@ With the raw data collected and looking reasonable, I next transformed the data 
 
 Then, to transfrom the polar coordinates to rectangular coordinates in the frame of the map, I used the following homogeneous transform. 
 
+![image](https://github.com/user-attachments/assets/95a197c5-b708-4d98-b74b-303f61b6bd33)
+
+This matrix multiplies a vector of the following form.
+
+![image](https://github.com/user-attachments/assets/58091ccc-2673-411a-96a6-df81cf2c33ae)
+
+For my robot, the TOF sensor is located 2.3in from the front of my robot so I subtracted that from all of the measurements.
+
+# Map
+
+After applying the following transfroms onto the collected data, i got the following map. 
+
+![image](https://github.com/user-attachments/assets/6d863777-ca89-4b2d-9f85-9c99b8315184)
+
+
+
+
 
 
 
