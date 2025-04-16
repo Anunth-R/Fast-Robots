@@ -38,6 +38,10 @@ During each scan, I collected 19 measurements at 20 deg increments (2 deg error 
 
 ![image](https://github.com/user-attachments/assets/b0b7cbf3-a559-41ff-bb11-053b72035285)
 
+Here is a video of my robot preforming a scan.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mGzt2U54KEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # Transformations
 
 With the raw data collected and looking reasonable, I next transformed the data into the coordinate frame of the map. I began by writing a function that transformed my measured angles so that they were consistent with the map frame. This included changing counter-clockwise rotation from negative to positive theta, mapping angles from [-180,180] to [0,2pi], and accounting for the starting orientation of the robot relative to the map. 
