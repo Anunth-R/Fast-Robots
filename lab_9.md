@@ -38,9 +38,15 @@ During each scan, I collected 19 measurements at 20 deg increments (2 deg error 
 
 ![image](https://github.com/user-attachments/assets/b0b7cbf3-a559-41ff-bb11-053b72035285)
 
-Here is a video of my robot preforming a scan.
+Here is a video of my robot preforming a scan. As shown below, the robot does a fairly good job of turning in place without translating too much.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/mGzt2U54KEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+To further verify the quality of the controller, here is a plot depicting the delta theta between the angle at which each TOF measurement was recorded. As shown below, each delta theta is within the 2 deg margin of error.
+
+![image](https://github.com/user-attachments/assets/7f43080b-74d4-4298-830e-18642e9d7e5a)
+
+
 
 # Transformations
 
