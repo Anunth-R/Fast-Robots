@@ -10,19 +10,19 @@ To map the environment, I selected using orientation control to spin my robot ar
 
 # Code Breakdown
 
-1. The code begins by storing the initial orientation of the robot and setting that to the first target for the robot to reach.
+The code begins by storing the initial orientation of the robot and setting that to the first target for the robot to reach.
 
 ![image](https://github.com/user-attachments/assets/a548f406-81e8-463a-9c39-25caf3288bf2)
 
-2. Then, if we need a new target, we compute a new target using the compute_next(target) helper function.
+Then, if we need a new target, we compute a new target using the compute_next(target) helper function.
 
 ![image](https://github.com/user-attachments/assets/716e1a6a-8a18-4cd5-a77e-10fee7caf757)
 
-3. Once our target has been computed, we call our scan_controller(float reading, float desire) which moves the robot to a desired orientation.
+Once our target has been computed, we call our scan_controller(float reading, float desire) which moves the robot to a desired orientation.
 
 ![image](https://github.com/user-attachments/assets/e58a7c89-b608-4b66-adf5-75e5e9686b87)
 
-4. If the get_meas flag is triggered, we take the measurement.
+If the get_meas flag is triggered, we take the measurement.
 
 ![image](https://github.com/user-attachments/assets/9ca0a6aa-d0c7-4a69-8375-8e014b1b03b8)
 
