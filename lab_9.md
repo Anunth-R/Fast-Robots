@@ -56,9 +56,12 @@ For my robot, the TOF sensor is located 2.3in from the front of my robot so I su
 
 # Map
 
-After applying the following transfroms onto the collected data, i got the following map. 
+After applying the following transfroms onto the collected data, i got the following map. The blue dotted line represents the approximate boundries of the environment from the collected data. As shown below, the sensor scans from each location show a reasonably accurate representation of the robot's environment. There are quite a few sources of error like not placing the robot in the exact same orientation at each location or erronious sensor measurements. However, despite this, the robot still produced a reasonably accurate map. 
 
 ![image](https://github.com/user-attachments/assets/6d863777-ca89-4b2d-9f85-9c99b8315184)
+
+# Discussion
+I really enjoyed putting together many pieces from previous labs to map and environment. I look forward to using this map to localize my robot in future labs!.=
 
 
 
