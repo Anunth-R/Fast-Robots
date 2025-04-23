@@ -54,6 +54,14 @@ Once the robot scans its environment with its ToF sensor, it can update its beli
 
 ![image](https://github.com/user-attachments/assets/26f2a850-fc7e-459a-b752-f49b4d581451)
 
+# Testing
+
+Below are recorded experiments of the robot localizing itself using the above algorithm. 
+
+![table_2v2](https://github.com/user-attachments/assets/6c710891-febf-4d4c-9d6a-5585627295f3)
+
+
+
 
 
 
