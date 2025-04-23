@@ -70,6 +70,8 @@ Below are recorded experiments of the robot localizing itself using the above al
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/oWmnsIwqayo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+From the above videos,the robot does a good job overall of localizing the robot's position in the map. However, the filter might be a little bit overconfident of the robot's localization as a lot of the time the probability of the belief was 1 while in reality there was still some positional error. In addition, the localization seems to work best in narrow corridors or channels and worse in open spaces. This makes sense as the closer the obstacles, the more reliable the sensor measurements. The other thing to note is that the odometry appears to be completely off from the robot's actual position. Therefore, it is good that we are fusing these measurements with ToF measurements rather than relying on ToF measurements alone. 
+
 
 
 
