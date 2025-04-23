@@ -62,11 +62,17 @@ Below are recorded experiments of the robot localizing itself using the above al
 
 ![table_2v2](https://github.com/user-attachments/assets/6c710891-febf-4d4c-9d6a-5585627295f3)
 
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mGzt2U54KEw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Trial 2
 
 ![table 3v2](https://github.com/user-attachments/assets/b77cb0e9-ce45-4825-92fa-ee95c9985d8b)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oWmnsIwqayo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+
 
 
 
